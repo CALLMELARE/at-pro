@@ -11,3 +11,4 @@
 |    UI 框架    |     Antd     |
 |     样式      |     sass     |
 |     路由      | react-router |
+|   状态管理    |    Redux     |
