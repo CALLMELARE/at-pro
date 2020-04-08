@@ -1,0 +1,36 @@
+body{
+    font-family: "Montserrat", "Avenir Next","Avenir","Segoe UI","Hiragino Sans GB","Hiragino Sans GB W3","PingFang SC","Microsoft Yahei","SimHei","SimKai",sans-serif;
+}
+
+.App {
+    height: -webkit-fill-available;
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        color: #000000;
+        line-height: 40px;
+        font-size: 1.25rem;
+        margin: 0.75rem 0;
+    }
+
+    .header-background {
+        background: #fff;
+
+        .trigger {
+            margin: 1rem;
+        }
+    }
+
+    .content-background {
+        background: #fff;
+
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        color: white;
+
+    }
+}

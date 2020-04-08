@@ -4,11 +4,11 @@
 
 ## 技术栈
 
-|     类型      |     名称     |
-| :-----------: | :----------: |
-|     语言      |  TypeScript  |
-| JavaScript 库 |   React.js   |
-|    UI 框架    |     Antd     |
-|     样式      |     sass     |
-|     路由      | react-router |
-|   状态管理    |    Redux     |
+|     类型      |     名称     |  版本   |
+| :-----------: | :----------: | :-----: |
+|     语言      |  TypeScript  |  3.7.5  |
+| JavaScript 库 |   React.js   | 16.13.1 |
+|    UI 框架    |     Antd     |  4.1.1  |
+|     样式      |     sass     | 1.26.3  |
+|     路由      | react-router |  5.1.2  |
+|   状态管理    |    Redux     |  4.0.5  |
