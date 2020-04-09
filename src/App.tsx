@@ -32,10 +32,8 @@ function getRoute() {
 
 class App extends Component<any, any> {
   state = {
-    collapsed: false,
+    collapsed: true,
   };
-
-
 
   toggle = () => {
     this.setState({
