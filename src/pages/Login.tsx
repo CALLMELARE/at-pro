@@ -31,19 +31,18 @@ class Login extends Component<any, any> {
         });
     }
 
-
     onFinish = (values: any) => {
         console.log('Received values of form: ', values);
         this.setState({ loading: true, })
-        if (values.username === "test" && values.password === "123456") {
+        if (values.username && values.password) {
             sessionStorage.setItem("isLogin", "1");
+            sessionStorage.setItem("username", values.username);
             this.setState({ loading: false, })
-            this.props.history.push("/")
+            window.location.href="/";
         } else {
             this.setState({ success: false })
         }
     };
-
 
     render() {
         return (

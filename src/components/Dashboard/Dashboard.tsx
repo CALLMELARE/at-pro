@@ -1,13 +1,56 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
+import {
+    MailOutlined
+} from '@ant-design/icons';
+import '../../styles/dashboard.scss';
+import Heatmap from './Heatmap';
+
+const message = false;
 
 class Dashboard extends React.PureComponent {
+
+    greeting() {
+        var hour = new Date().getHours()
+        var greeting = ''
+        if (hour < 6) {
+            greeting = '夜深了'
+        } else if (hour < 10) {
+            greeting = '早上好'
+        } else if (hour < 12) {
+            greeting = '上午好'
+        } else if (hour < 14) {
+            greeting = '中午好'
+        } else if (hour < 18) {
+            greeting = '下午好'
+        } else if (hour < 23) {
+            greeting = '晚上好'
+        } else {
+            greeting = '夜深了'
+        }
+        return greeting
+    }
+
     render() {
         return (
             <div>
                 <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                    <Col span={12}><Card>打招呼</Card></Col>
-                    <Col span={12}><Card>周报</Card></Col>
+                    <Col span={12}>
+                        <div className="dashboard-title">
+                            {this.greeting() + "，" + sessionStorage.getItem("username")}
+                            <a href="/" className="dashboard-title-message">
+                                {message ? <MailOutlined style={{ fontSize: '1.25rem', color: '#00A1E9' }} /> : <MailOutlined style={{ fontSize: '1.25rem', color: '#DDDDDD' }} />}
+                            </a>
+                        </div>
+                        <Card>
+                        </Card>
+                    </Col>
+                    <Col span={12}>
+                        <div className="dashboard-title">周报</div>
+                        <Card>
+
+                        </Card>
+                    </Col>
                 </Row>
             </div>
         )
