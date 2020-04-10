@@ -1,5 +1,5 @@
-import React from 'react';
-import { Row, Col, Card } from 'antd';
+import React, { Component } from 'react';
+import { Row, Col, Card, Badge } from 'antd';
 import {
     MailOutlined
 } from '@ant-design/icons';
@@ -8,7 +8,18 @@ import Heatmap from './Heatmap';
 
 const message = false;
 
-class Dashboard extends React.PureComponent {
+interface Props {
+    collapsed: boolean,
+}
+
+
+class Dashboard extends Component<any, any> {
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+            joinTime: 33
+        }
+    }
 
     greeting() {
         var hour = new Date().getHours()
@@ -43,6 +54,9 @@ class Dashboard extends React.PureComponent {
                             </a>
                         </div>
                         <Card>
+                            <p>今天是你加入天外天工作室的第<span className="join-time">{this.state.joinTime}</span>天</p>
+                            <p><span className="dashboard-bold">账号：</span>testAccount</p>
+                            <p><span className="dashboard-bold">组别：</span>北洋园-随便什么组（成员）</p>
                         </Card>
                     </Col>
                     <Col span={12}>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Input, Button, Card, Modal } from 'antd';
 import { Layout, Alert } from 'antd';
-import twtlogo from '../assets/twtlogo_tilt.svg'
+import twtlogo from '../assets/twtlogo_tilt.svg';
+import revtwtlogo from '../assets/twtlogo_tilt_rev.svg';
 import { UserOutlined, LockOutlined, LoadingOutlined } from '@ant-design/icons';
 import '../styles/login.scss';
 
@@ -26,7 +27,7 @@ class Login extends Component<any, any> {
     error() {
         Modal.error({
             title: <p><img src={twtlogo} height="30" width="30" />At</p>,
-            content: '请检查用户名及密码是否正确',
+            content: '请检查IPA账号及密码是否正确',
             okText: "Ok",
         });
     }
@@ -38,7 +39,7 @@ class Login extends Component<any, any> {
             sessionStorage.setItem("isLogin", "1");
             sessionStorage.setItem("username", values.username);
             this.setState({ loading: false, })
-            window.location.href="/";
+            window.location.href = "/";
         } else {
             this.setState({ success: false })
         }
@@ -59,9 +60,9 @@ class Login extends Component<any, any> {
                         >
                             <Form.Item
                                 name="username"
-                                rules={[{ required: true, message: '用户名不能为空!' }]}
+                                rules={[{ required: true, message: 'IPA账号不能为空!' }]}
                             >
-                                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="用户名" />
+                                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="IPA账号" />
                             </Form.Item>
                             <Form.Item
                                 name="password"
@@ -73,9 +74,10 @@ class Login extends Component<any, any> {
                                     placeholder="密码"
                                 />
                             </Form.Item>
-                            <Form.Item>
-                                <Button type="primary" htmlType="submit" className="login-form-button">登 录{this.state.loading ? <LoadingOutlined /> : null}</Button>
-                            </Form.Item>
+                            <div className="login-buttons">
+                                <Button type="primary" htmlType="submit" className="login-form-button">LOG IN</Button>
+                                <Button type="primary" className="login-with-twt-button"><img src={revtwtlogo} height="37" width="37" /></Button>
+                            </div>
                         </Form>
                     </Card>
 
