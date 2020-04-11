@@ -2,7 +2,19 @@
 
 这是为天外天工作室开发的At系统
 
-## 技术栈
+## 起步/Get Start
+
+```bash
+$ git clone https://github.com/CALLMELARE/at-pro.git
+$ cd at-pro
+$ npm install
+```
+
+```bash
+$ npm run start
+```
+
+## 技术栈/Tech-stack
 
 |       类型       |     名称     |  版本   |
 | :--------------: | :----------: | :-----: |
