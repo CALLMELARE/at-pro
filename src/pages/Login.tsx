@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input, Button, Card, Modal } from 'antd';
-import { Layout, Alert } from 'antd';
+import { Layout, Alert, Divider } from 'antd';
 import twtlogo from '../assets/twtlogo_tilt.svg';
 import revtwtlogo from '../assets/twtlogo_tilt_rev.svg';
 import { UserOutlined, LockOutlined, LoadingOutlined } from '@ant-design/icons';
@@ -10,7 +10,6 @@ import '../styles/login.scss';
 const { Content, Footer } = Layout;
 
 interface Props {
-    collapsed: boolean,
 }
 
 class Login extends Component<any, any> {
@@ -52,6 +51,7 @@ class Login extends Component<any, any> {
                     {this.state.success ? null : this.error()}
                     <Card className="login-card">
                         <h2>登录</h2>
+                        <Divider dashed className="divider-dashed" />
                         <Form
                             name="normal_login"
                             className="login-form"

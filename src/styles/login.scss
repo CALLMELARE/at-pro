@@ -19,7 +19,7 @@ body {
 
         border-radius: 10px;
         border: none;
-        background-image: linear-gradient(#d9d9d9, #ffffff);
+        // background-image: linear-gradient(#d9d9d9, #ffffff);
         max-width: 300px;
         min-width: 300px;
         margin: 0 auto;
@@ -30,24 +30,47 @@ body {
         bottom: auto;
     }
 
+    .divider-dashed {
+        border-color: #000000;
+    }
+
+    .login-bg-text {
+        font-family: "DSISO1";
+    }
+
     .login-buttons {
         display: flex;
         justify-content: space-around;
 
         .login-form-button {
+            margin: 5px;
             height: 40px;
             width: 100px;
             font-weight: bold;
             font-size: 1.1rem;
             padding: 0;
+            -moz-box-shadow: 0px 0px 20px #d9d9d9;
+            -webkit-box-shadow: 0px 0px 20px #d9d9d9;
+            box-shadow: 0px 0px 20px #d9d9d9;
         }
 
         .login-with-twt-button {
-            height: 40px;
-            width: 40px;
-            border: 5px;
+            height: 50px;
+            width: 50px;
+            border: 2px solid;
             padding: 0;
             border-color: #ffffff;
+            -moz-box-shadow: 0px 0px 20px #d9d9d9;
+            -webkit-box-shadow: 0px 0px 20px #d9d9d9;
+            box-shadow: 0px 0px 20px #d9d9d9;
         }
+    }
+
+    .ant-input-affix-wrapper {
+        border-radius: 30px;
+        padding: 0.5rem 0.75rem;
+        -moz-box-shadow: 0px 0px 20px #d9d9d9;
+        -webkit-box-shadow: 0px 0px 20px #d9d9d9;
+        box-shadow: 0px 0px 20px #d9d9d9;
     }
 }

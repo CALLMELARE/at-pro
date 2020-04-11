@@ -1,16 +1,38 @@
-.ant-btn{
+.ant-btn {
     border-radius: 80px;
 }
 
-.ant-btn-primary{
+.ant-btn-primary {
     background-color: #000000;
     border-color: #ffffff;
 }
 
-.content-background{
+.content-background {
     background: none !important;
 }
 
-p{
+p {
     font-size: 1rem;
+}
+
+.ant-menu-item {
+    a:hover {
+        color: #45484e !important;
+    }
+}
+
+.ant-menu-item::after {
+    border-right: none !important;
+}
+
+.ant-menu-item-selected {
+    background-color: #45484e !important;
+
+    a {
+        color: #ffffff !important;
+    }
+
+    a:hover {
+        color: #ffffff !important;
+    }
 }

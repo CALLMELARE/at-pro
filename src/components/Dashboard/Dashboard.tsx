@@ -62,7 +62,9 @@ class Dashboard extends Component<any, any> {
                     <Col span={12}>
                         <div className="dashboard-title">周报</div>
                         <Card>
-
+                            <p className="dashboard-bold">第{202015}期周报：<span className="dashboard-commit-status-not">未提交</span></p>
+                            <p className="dashboard-explain">起止时间：2020/04/07 ~ 2020/04/13</p>
+                            <p className="dashboard-explain">周报截止日期为每周周一，在时间范围内可以进行编辑。超过编辑时间的周报不能进行编辑。<a href="/" className="dashboard-to-report">去编辑周报 >></a></p>
                         </Card>
                     </Col>
                 </Row>

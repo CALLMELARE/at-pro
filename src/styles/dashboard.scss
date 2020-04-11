@@ -10,11 +10,29 @@
 
 }
 
-.join-time{
+.join-time {
     font-size: 1.5rem;
     padding: 0 0.5rem;
 }
 
-.dashboard-bold{
+.dashboard-bold {
     font-weight: bold;
+    margin: 0;
+}
+
+
+.dashboard-explain {
+    color: #a5a5a5;
+}
+
+.dashboard-to-report {
+    color: #00A1E9;
+}
+
+.dashboard-commit-status-not {
+    color: orange;
+}
+
+.dashboard-commit-status-yes {
+    color: green;
 }
