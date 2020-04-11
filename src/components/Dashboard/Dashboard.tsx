@@ -12,7 +12,6 @@ interface Props {
     collapsed: boolean,
 }
 
-
 class Dashboard extends Component<any, any> {
     constructor(props: Props) {
         super(props);
