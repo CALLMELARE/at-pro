@@ -69,7 +69,6 @@ class Dashboard extends Component<any, any> {
                     </Col>
                 </Row>
                 <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                <MdEditor/>
                 </Row>
             </div>
         )
