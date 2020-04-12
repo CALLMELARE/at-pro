@@ -5,6 +5,7 @@ import {
 } from '@ant-design/icons';
 import '../../styles/dashboard.scss';
 import Heatmap from './Heatmap';
+import MdEditor from '../MdUnit/MdEditor';
 
 const message = false;
 
@@ -66,6 +67,9 @@ class Dashboard extends Component<any, any> {
                             <p className="dashboard-explain">周报截止日期为每周周一，在时间范围内可以进行编辑。超过编辑时间的周报不能进行编辑。<a href="/" className="dashboard-to-report">去编辑周报 >></a></p>
                         </Card>
                     </Col>
+                </Row>
+                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                <MdEditor/>
                 </Row>
             </div>
         )
