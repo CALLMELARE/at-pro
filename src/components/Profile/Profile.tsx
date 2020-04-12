@@ -1,6 +1,8 @@
 import React from 'react';
-import { Descriptions } from 'antd';
-import testUserInfo from '../../test/userinfo'
+import { Descriptions, Card } from 'antd';
+import testUserInfo from '../../test/userinfo';
+import ResetPwd from './ResetPassword';
+import '../../styles/profile.scss';
 interface profileType {
     id: number,
     username: string,
@@ -59,7 +61,8 @@ class Profile extends React.PureComponent {
                     <Descriptions.Item label="入职时间">{this.getDate(userInfo.created_at)}</Descriptions.Item>
                     <Descriptions.Item label="档案更新于">{this.getDate(userInfo.updated_at)}</Descriptions.Item>
                 </Descriptions>
-                
+                <div className="ant-descriptions-title">修改密码</div>
+                <ResetPwd />
             </div>
         )
     }
