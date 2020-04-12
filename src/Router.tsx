@@ -4,6 +4,7 @@ import NotFound from './pages/404';
 import Login from './pages/Login';
 import App from './App';
 import NoAuth from './pages/NoAuth';
+import Logout from './pages/Logout';
 
 const isLogged = sessionStorage.getItem("isLogin") === "1" ? true : false;
 
@@ -11,6 +12,7 @@ export default () => (
     <Switch>
         <Route path="/404" component={NotFound} />
         <Route path="/noauth" component={NoAuth} />
+        <Route path="/logout" component={Logout} />
         <Route path="/login" component={Login} />
         <Route path="/" render={props => {
             return isLogged

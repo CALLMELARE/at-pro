@@ -64,7 +64,7 @@ class SiderCustom extends Component<any, any> {
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="6" title="登出">
-                        <Link to="/">
+                        <Link to="/logout">
                             <LogoutOutlined />
                             {this.props.collapsed ? null : "登出"}
                         </Link>
