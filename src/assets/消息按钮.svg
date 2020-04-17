@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1, .cls-7, .cls-8, .cls-9 {
+        fill: #45484e;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-7 {
+        stroke: #a0a0a0;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0.85px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-9 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4, .cls-7 {
+        stroke-width: 2px;
+      }
+
+      .cls-5 {
+        fill: none;
+        stroke: #45484e;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="画板_1" data-name="画板 1">
+    <rect id="矩形_1" data-name="矩形 1" class="cls-1" x="15" y="11" width="270" height="190" rx="20" ry="20"/>
+    <rect id="矩形_7" data-name="矩形 7" class="cls-2" x="130" y="59" width="52" height="15"/>
+    <rect id="矩形_8" data-name="矩形 8" class="cls-2" x="214" y="59" width="53" height="15"/>
+    <path id="形状_3" data-name="形状 3" class="cls-3" d="M174.725,94.512a7.722,7.722,0,0,1,5.235,0,79.742,79.742,0,0,0-4.188,11.567c-0.752,6.714,8.375,9.463,8.375,9.463s7.423-.21,12.563-9.463c5.581-.356,8.207,8.162,14.656,8.412,4.418,0.171,7.32-.877,8.45-1.929,1.621-1.508,2.96-4.775,2.253-10.442A19.377,19.377,0,0,0,218.7,93.46a7.38,7.38,0,0,1,5.234,0c4.073,1.77,6.517,8.721,4.188,17.875-2.128,10.141-16.751,10.515-16.751,10.515s-10.508-2.628-13.609-8.412c-5.759,11.123-13.61,9.463-13.61,9.463-5.841-.877-11.164-4.178-13.609-9.463C167.323,106.489,169.384,96.676,174.725,94.512Z"/>
+    <rect id="矩形_6" data-name="矩形 6" class="cls-4" x="130" y="165" width="156" height="96" rx="20" ry="20"/>
+    <ellipse id="椭圆_5" data-name="椭圆 5" class="cls-5" cx="190.5" cy="211" rx="23.5" ry="16"/>
+    <rect id="矩形_9" data-name="矩形 9" class="cls-6" x="148" y="170" width="87" height="42"/>
+    <ellipse id="椭圆_2" data-name="椭圆 2" class="cls-7" cx="169" cy="194.5" rx="12" ry="11.5"/>
+    <rect id="矩形_10" data-name="矩形 10" class="cls-7" x="199" y="190" width="20" height="10"/>
+    <ellipse id="椭圆_4" data-name="椭圆 4" class="cls-7" cx="274" cy="261.5" rx="12" ry="11.5"/>
+    <circle id="椭圆_6" data-name="椭圆 6" class="cls-4" cx="51" cy="214" r="36"/>
+    <circle id="椭圆_7" data-name="椭圆 7" class="cls-8" cx="51.5" cy="201.5" r="8.5"/>
+    <path id="椭圆_8" data-name="椭圆 8" class="cls-9" d="M34,230c0-9.389,8.059-17,18-17s18,7.611,18,17"/>
+  </g>
+</svg>

@@ -40,13 +40,13 @@ class SiderCustom extends Component<any, any> {
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="2" title="消息">
-                        <Link to="/">
+                        <Link to="/Message">
                             <MessageOutlined />
                             {this.props.collapsed ? null : "消息"}
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="3" title="工作">
-                        <Link to="/">
+                        <Link to="/Work">
                             <ProjectOutlined />
                             {this.props.collapsed ? null : "工作"}
                         </Link>
@@ -61,12 +61,6 @@ class SiderCustom extends Component<any, any> {
                         <Link to="/Profile" >
                             <UserOutlined />
                             {this.props.collapsed ? null : "个人"}
-                        </Link>
-                    </Menu.Item>
-                    <Menu.Item key="6" title="登出">
-                        <Link to="/logout">
-                            <LogoutOutlined />
-                            {this.props.collapsed ? null : "登出"}
                         </Link>
                     </Menu.Item>
                 </Menu>

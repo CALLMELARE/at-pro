@@ -1,5 +1,5 @@
-body{
-    font-family: "Montserrat", "Avenir Next","Avenir","Segoe UI","Hiragino Sans GB","Hiragino Sans GB W3","PingFang SC","Microsoft Yahei","SimHei","SimKai",sans-serif;
+body {
+    font-family: "Montserrat", "Avenir Next", "Avenir", "Segoe UI", "Hiragino Sans GB", "Hiragino Sans GB W3", "PingFang SC", "Microsoft Yahei", "SimHei", "SimKai", sans-serif;
 }
 
 .App {
@@ -17,9 +17,22 @@ body{
 
     .header-background {
         background: #fff;
+        color: #45484e;
+        display: flex;
+        justify-content: space-between;
 
         .trigger {
             margin: 1rem;
+        }
+
+        .logout {
+            margin: 1rem;
+            color: #45484e;
+        }
+
+        .noti-button {
+            margin: 1rem;
+            color: #45484e;
         }
     }
 
