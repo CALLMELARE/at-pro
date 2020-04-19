@@ -52,7 +52,7 @@ class SiderCustom extends Component<any, any> {
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="4" title="成员">
-                        <Link to="/">
+                        <Link to="/Members">
                             <TeamOutlined />
                             {this.props.collapsed ? null : "成员"}
                         </Link>

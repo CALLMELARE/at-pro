@@ -2,6 +2,7 @@ import Dashboard from '../components/Dashboard/Dashboard';
 import Profile from '../components/Profile/Profile';
 import Message from '../components/Message/Message';
 import Work from '../components/Work/Work';
+import Members from '../components/Members/Members';
 
 export default [{
     label: "首页",
@@ -19,4 +20,8 @@ export default [{
     label: "工作",
     path: '/Work',
     component: Work,
+}, {
+    label: "成员",
+    path: '/Members',
+    component: Members,
 }]

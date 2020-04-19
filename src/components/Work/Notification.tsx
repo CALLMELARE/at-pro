@@ -15,9 +15,7 @@ class Message extends React.PureComponent<any, any> {
                     onClose={this.props.onClose}
                     visible={this.props.visible}
                 >
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
+                    
                 </Drawer>
             </div>
         )

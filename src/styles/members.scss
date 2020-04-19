@@ -1,0 +1,52 @@
+.mem-title {
+    // margin: 0 10%;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.mem-container {
+
+    // margin: 0 10%;
+    .mem-tabs {
+        .mem-content-by-group {
+            margin: 1rem 2rem;
+
+            .mem-title {
+                margin: 0.5rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            .mem-cards {
+                .mem-card {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    background-color: #ffffff;
+                    border-radius: 30px;
+                    min-height: 1.5rem;
+                    padding: 0.5rem 1rem;
+                    margin: 1rem 0;
+                    
+                    .mem-mail-icon {
+                        margin: 0 0.7rem;
+                        cursor: pointer;
+                    }
+
+                    .mem-mail-icon:hover {
+                        box-shadow: 0 0 20px #d9d9d9;
+                    }
+
+                    .mem-user-icon {
+                        margin: 0 0.7rem;
+                        cursor: pointer;
+                    }
+
+                    .mem-user-icon:hover {
+                        box-shadow: 0 0 20px #d9d9d9;
+                    }
+                }
+            }
+        }
+    }
+}

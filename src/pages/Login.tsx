@@ -75,8 +75,11 @@ class Login extends Component<any, any> {
                                 />
                             </Form.Item>
                             <div className="login-buttons">
-                                <Button type="primary" htmlType="submit" className="login-form-button">LOG IN</Button>
-                                <Button type="primary" className="login-with-twt-button"><img src={revtwtlogo} height="37" width="37" /></Button>
+                                <div>
+                                    <p>使用天外天账号登录</p>
+                                    <Button type="primary" htmlType="submit" className="login-form-button">LOG IN</Button>
+                                </div>
+                                <Button type="primary" className="login-with-twt-button"><img src={revtwtlogo} height="43" width="43" /></Button>
                             </div>
                         </Form>
                     </Card>
