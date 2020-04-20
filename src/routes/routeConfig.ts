@@ -3,6 +3,8 @@ import Profile from '../components/Profile/Profile';
 import Message from '../components/Message/Message';
 import Work from '../components/Work/Work';
 import Members from '../components/Members/Members';
+import WeekReport from '../components/Work/WeekReport';
+import MdGuide from '../components/MdUnit/MdGuide';
 
 export default [{
     label: "首页",
@@ -24,4 +26,12 @@ export default [{
     label: "成员",
     path: '/Members',
     component: Members,
+},{
+    label: "编辑周报",
+    path: '/Work/EditReport',
+    component: WeekReport,
+},{
+    label: "Markdown导引",
+    path: '/Work/MdGuide',
+    component: MdGuide,
 }]

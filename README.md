@@ -27,4 +27,5 @@ $ npm run start
 | JavaScript 工具库 |           lodash           | 4.17.15 |
 |  Markdown 编辑器  | react-markdown-editor-lite |  1.0.2  |
 |  Markdown 渲染器  |        Markdown-it         | 10.0.0  |
+|     代码高亮      |        highlight.js        | 9.18.1  |
 | 数据可视化(备用)  |         Bizcharts          |  3.5.8  |

@@ -1,0 +1,31 @@
+.editreport-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+
+    .md-rule {
+        color: #a9a9a9;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+}
+
+.weekreport-md-container {
+    height: 100%;
+}
+
+.rc-md-editor {
+    min-height: 500px !important;
+}
+
+.editreport-tips {
+    font-size: 0.8rem;
+    color: #a9a9a9;
+}
+
+.editreport-btn-group {
+    display: flex;
+    justify-content: flex-end;
+    .editreport-btn {
+        margin: 0.5rem;
+    }
+}
