@@ -21,8 +21,27 @@ class SiderCustom extends Component<any, any> {
         }
     }
 
-    menuRender(state: boolean) {
-
+    menuRender() {
+        let pathname:string = window.location.pathname;
+        switch (pathname.split("/")[1]) {
+            case "":
+                return ['1']
+                break;
+            case "Message":
+                return ['2']
+                break;
+            case "Work":
+                return ['3']
+                break;
+            case "Members":
+                return ['4']
+                break;
+            case "Profile":
+                return ['5']
+                break;
+            default:
+                break;
+        }
     }
 
     render() {
@@ -32,7 +51,7 @@ class SiderCustom extends Component<any, any> {
                     <img src={twtlogo} height="40" width="40" />
                     {this.props.collapsed ? null : "At"}
                 </div>
-                <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
+                <Menu theme="light" mode="inline" selectedKeys={this.menuRender()}>
                     <Menu.Item key="1" title="首页">
                         <Link to="/">
                             <HomeOutlined />

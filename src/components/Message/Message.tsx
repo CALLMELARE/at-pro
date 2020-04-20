@@ -1,6 +1,6 @@
 import React from 'react';
 import { Descriptions, Card, Collapse } from 'antd';
-import '../../styles/profile.scss';
+import '../../styles/message.scss';
 
 const { Panel } = Collapse;
 
@@ -10,14 +10,14 @@ class Message extends React.PureComponent {
     render() {
         return (
             <div>
-                <Collapse defaultActiveKey={['1']}>
-                    <Panel header="成员消息" key="1">
+                <Collapse bordered={false} className="mes-collapse card-shadow">
+                    <Panel header="成员消息" key="1" className="mes-panel">
                     </Panel>
-                    <Panel header="会议" key="2">
+                    <Panel header="会议" key="2" className="mes-panel">
                     </Panel>
-                    <Panel header="活动" key="3">
+                    <Panel header="活动" key="3" className="mes-panel">
                     </Panel>
-                    <Panel header="系统" key="4">
+                    <Panel header="系统" key="4" className="mes-panel">
                     </Panel>
                 </Collapse>
             </div>

@@ -69,10 +69,10 @@ class App extends Component<any, any> {
               })}
             </div>
             <div>
+              <a className="noti-button" onClick={this.showDrawer}><BellOutlined /></a>
               <Link className="logout" to="/logout">
                 <LogoutOutlined />
               </Link>
-              <a className="noti-button" onClick={this.showDrawer}><BellOutlined /></a>
               <Notification visible={this.state.visible} onClose={this.onClose} />
             </div>
           </Header>

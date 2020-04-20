@@ -26,7 +26,7 @@ class Members extends React.PureComponent {
                 let _item: Member = data[i]
                 if (_item.type === "组长") {
                     memLeader.push(
-                        <div className="mem-card">
+                        <div className="mem-card card-shadow">
                             <span>{_item.name}</span>
                             <div>
                                 <Tooltip placement="bottom" title={"私信"}>
@@ -40,7 +40,7 @@ class Members extends React.PureComponent {
                     )
                 } else if (_item.type === "组员") {
                     memMember.push(
-                        <div className="mem-card">
+                        <div className="mem-card card-shadow">
                             <span>{_item.name}</span>
                             <div>
                                 <Tooltip placement="bottom" title={"私信"}>
