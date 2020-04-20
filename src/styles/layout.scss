@@ -20,6 +20,7 @@ body {
         color: #45484e;
         display: flex;
         justify-content: space-between;
+        box-shadow: 0 0 20px #e9e9e9;
 
         .trigger {
             margin: 1rem;
@@ -28,11 +29,13 @@ body {
         .logout {
             margin: 1rem;
             color: #45484e;
+            font-size: 1.1rem;
         }
 
         .noti-button {
             margin: 1rem;
             color: #45484e;
+            font-size: 1.1rem;
         }
     }
 

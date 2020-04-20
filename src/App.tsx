@@ -76,15 +76,10 @@ class App extends Component<any, any> {
               <Notification visible={this.state.visible} onClose={this.onClose} />
             </div>
           </Header>
-          <Content
-            className="content-background"
-            style={{
-              margin: '24px 16px',
-              padding: 24,
-              minHeight: 280,
-            }}
-          >
-            {getRoute()}
+          <Content className="content-background">
+            <div className="widCtrl">
+              {getRoute()}
+            </div>
           </Content>
         </Layout>
       </Layout>
