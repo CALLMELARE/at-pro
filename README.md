@@ -31,3 +31,6 @@ $ npm run start
 |  Markdown 渲染器  |        Markdown-it         | 10.0.0  |
 |     代码高亮      |        highlight.js        | 9.18.1  |
 | 数据可视化(备用)  |         Bizcharts          |  3.5.8  |
+
+<p align="center"><img src="http://ww1.sinaimg.cn/large/007lrPpNly1gdj0ocf5nuj30ea045weg.jpg" height="50" style=""></img></p>
+
