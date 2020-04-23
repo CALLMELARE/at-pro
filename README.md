@@ -1,6 +1,8 @@
-# <img src="src/assets/twtlogo_tilt.svg" width="70"></img>At-pro
+# <img src="src/assets/favicon.png" width="70"></img>At-pro
 
-这是为天外天工作室开发的At系统
+![GitHub last commit](https://img.shields.io/github/last-commit/CALLMELARE/at-pro?style=flat-square) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CALLMELARE/at-pro?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/CALLMELARE/at-pro?style=flat-square) ![GitHub](https://img.shields.io/github/license/CALLMELARE/at-pro?style=flat-square) ![org](https://img.shields.io/badge/organization-TWT%20Studio-blue?style=flat-square)
+
+OA system for twtstudio
 
 ## 起步/Get Start
 
