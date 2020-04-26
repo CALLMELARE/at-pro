@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import config from '../site-config.json';
 import { Layout, Menu, Drawer, Button } from 'antd';
 import {
     HomeOutlined, UserOutlined, LogoutOutlined, MessageOutlined, TeamOutlined, ProjectOutlined
@@ -22,7 +23,7 @@ class SiderCustom extends Component<any, any> {
     }
 
     menuRender() {
-        let pathname:string = window.location.pathname;
+        let pathname: string = window.location.pathname;
         switch (pathname.split("/")[1]) {
             case "":
                 return ['1']
@@ -49,7 +50,7 @@ class SiderCustom extends Component<any, any> {
             <Sider theme="light" trigger={null} collapsible collapsed={this.props.collapsed}>
                 <div className="logo" >
                     <img src={twtlogo} height="40" width="40" />
-                    {this.props.collapsed ? null : "At"}
+                    {this.props.collapsed ? null : config.title}
                 </div>
                 <Menu theme="light" mode="inline" selectedKeys={this.menuRender()}>
                     <Menu.Item key="1" title="首页">

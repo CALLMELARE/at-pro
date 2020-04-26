@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Badge } from 'antd';
+import config from '../../site-config.json';
 import {
     MailOutlined
 } from '@ant-design/icons';
@@ -54,7 +55,7 @@ class Dashboard extends Component<any, any> {
                             </a>
                         </div>
                         <Card className="card-shadow">
-                            <p>今天是你加入天外天工作室的第<span className="join-time">{this.state.joinTime}</span>天</p>
+                            <p>今天是你加入{config.org}的第<span className="join-time">{this.state.joinTime}</span>天</p>
                             <p><span className="dashboard-bold">账号：</span>testAccount</p>
                             <p><span className="dashboard-bold">组别：</span>北洋园-随便什么组（成员）</p>
                         </Card>
