@@ -23,6 +23,7 @@ $ npm run start
 - ROOT 后端根目录
 - title 站点名称
 - org 组织名称
+- orgInShort 组织简称
 
 #### 配置举例/Configuration Example
 
@@ -30,7 +31,8 @@ $ npm run start
 {
     "ROOT": "https://www.test.com",
     "title": "At",
-    "org": "天外天工作室"
+    "org": "天外天工作室",
+    "orgInShort": "天外天"
 }
 ```
 
