@@ -16,6 +16,24 @@ $ npm install
 $ npm run start
 ```
 
+## 配置/Config
+
+在`src`下新建名为`site-config.json`的文件，配置基本信息
+
+- ROOT 后端根目录
+- title 站点名称
+- org 组织名称
+
+#### 配置举例/Configuration Example
+
+```json
+{
+    "ROOT": "https://www.test.com",
+    "title": "At",
+    "org": "天外天工作室"
+}
+```
+
 ## 技术栈/Tech-stack
 
 |       类型        |            名称            |  版本   |
