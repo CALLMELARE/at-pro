@@ -5,6 +5,8 @@ import twtlogo from '../assets/twtlogo_tilt.svg';
 import revtwtlogo from '../assets/twtlogo_tilt_rev.svg';
 import { UserOutlined, LockOutlined, LoadingOutlined } from '@ant-design/icons';
 import '../styles/login.scss';
+import { getLogin } from '../api/OAuth';
+import fetchApi from '../api/callApi';
 
 
 const { Content, Footer } = Layout;
@@ -33,15 +35,21 @@ class Login extends Component<any, any> {
 
     onFinish = (values: any) => {
         console.log('Received values of form: ', values);
-        this.setState({ loading: true, })
-        if (values.username && values.password) {
-            sessionStorage.setItem("isLogin", "1");
-            sessionStorage.setItem("username", values.username);
-            this.setState({ loading: false, })
-            window.location.href = "/";
-        } else {
-            this.setState({ success: false })
-        }
+        this.setState({ loading: true, });
+        const { apiPath, request } = getLogin(values.username, values.password);
+        fetchApi(apiPath, request)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.message === "登录成功") {
+                    sessionStorage.setItem("isLogin", "1");
+                    sessionStorage.setItem("username", values.username);
+                    this.setState({ loading: false, })
+                    window.location.href = "/";
+                } else {
+                    this.setState({ success: false })
+                }
+            })
     };
 
     render() {

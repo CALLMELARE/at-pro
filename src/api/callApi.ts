@@ -1,9 +1,11 @@
-const API_ROOT = '';
+import config from '../site-config.json'
+
+const API_ROOT = config.ROOT;
 
 interface req {
-    headers?: any,
-    body?: any,
-    method?: string
+  headers?: any,
+  body?: any,
+  method?: string
 }
 
 const fetchApi = (apiPath: string, request: req = {}) => {

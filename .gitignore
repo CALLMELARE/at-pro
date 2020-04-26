@@ -27,3 +27,6 @@ yarn-error.log*
 
 #reports
 /reports
+
+#config
+/src/site-config.json

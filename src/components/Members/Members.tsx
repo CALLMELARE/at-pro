@@ -7,6 +7,7 @@ import {
 import '../../styles/members.scss';
 
 import memsData from '../../test/members';
+import SendMessage from '../Message/SendMessage';
 
 const { TabPane } = Tabs;
 
@@ -17,7 +18,6 @@ interface Member {
 }
 
 class Members extends React.PureComponent {
-
     renderMems() {
         let memLeader: JSX.Element[] = [], memMember: JSX.Element[] = [];
         let data = memsData.data;
@@ -29,9 +29,7 @@ class Members extends React.PureComponent {
                         <div className="mem-card card-shadow">
                             <span>{_item.name}</span>
                             <div>
-                                <Tooltip placement="bottom" title={"私信"}>
-                                    <span className="mem-mail-icon"><MailOutlined /></span>
-                                </Tooltip>
+                                <SendMessage btncls="mem-mail-icon" content={<MailOutlined />} target={[_item.memId]} />
                                 <Tooltip placement="bottom" title={"个人信息"}>
                                     <span className="mem-user-icon"><UserOutlined /></span>
                                 </Tooltip>
@@ -43,9 +41,7 @@ class Members extends React.PureComponent {
                         <div className="mem-card card-shadow">
                             <span>{_item.name}</span>
                             <div>
-                                <Tooltip placement="bottom" title={"私信"}>
-                                    <span className="mem-mail-icon"><MailOutlined /></span>
-                                </Tooltip>
+                                <SendMessage btncls="mem-mail-icon" content={<MailOutlined />} />
                                 <Tooltip placement="bottom" title={"个人信息"}>
                                     <span className="mem-user-icon"><UserOutlined /></span>
                                 </Tooltip>
