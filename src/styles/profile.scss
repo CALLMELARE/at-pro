@@ -1,12 +1,75 @@
-.ant-descriptions-title{
+.ant-descriptions-title {
     margin: 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.reset-pwd-form{
+.reset-pwd-form {
 
-    form{
+    form {
         max-width: 500px;
+    }
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    border-radius: 16px;
+    position: relative;
+
+    .profile-help {
+        position: absolute;
+        height: 2rem;
+        top: 1rem;
+        right: 1rem;
+        color: #d9d9d9;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .profile-card-left {
+        .profile-card-img {
+            background-image: url(../assets/usericon-default.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40%;
+            width: 200px;
+
+            .user-icon-upper {
+                width: 200px;
+            }
+
+        }
+    }
+
+    .profile-card-left:hover {
+        .user-icon-upper {
+            animation-fill-mode: forwards;
+            animation: imgLeave 1s;
+        }
+    }
+
+    .profile-card-right {
+        padding: 1rem;
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .profile-card-info {
+            font-size: 1rem;
+            font-weight: bold;
+
+            span {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+@keyframes imgLeave {
+    100% {
+        transform: translate(-100px) scale(0.7);
     }
 }

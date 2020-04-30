@@ -42,6 +42,7 @@ class ResetPwd extends Component<any, any> {
                     <Form.Item name="newpw2" label="确认密码" rules={[{ required: true }]}>
                         <Input allowClear />
                     </Form.Item>
+                    <p className="reset-pwd-tip">为确保信息安全，请养成良好的密码使用习惯，不得使用弱密码，尽量避免同一密码多处使用。 请设置最少 8 位的密码，建议包含 大、</p>
                     <Form.Item {...tailLayout}>
                         <Button type="primary" htmlType="submit">修改</Button>
                     </Form.Item>

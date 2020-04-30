@@ -5,9 +5,8 @@ import {
     MailOutlined
 } from '@ant-design/icons';
 import '../../styles/members.scss';
-
 import memsData from '../../test/members';
-import SendMessage from '../Message/SendMessage';
+import SendMessage from '../public/SendMessage';
 
 const { TabPane } = Tabs;
 
