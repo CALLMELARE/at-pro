@@ -5,6 +5,10 @@ body {
 }
 
 .login-page {
+    background-image: url(../assets/login-bg.png);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
     .login-card {
         h2 {
             display: flex;

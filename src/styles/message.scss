@@ -19,6 +19,13 @@
     display: none;
 }
 
+.mail-port {
+    height: 30px;
+    border: 10px solid #000000;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+}
+
 .send-message-page {
     position: fixed;
     top: 0;
@@ -61,10 +68,75 @@
     }
 }
 
+.ant-modal-mask {
+    background-color: #f9f9f9;
+    background-image: url(../assets/POST-bg.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ant-modal-content {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.ant-modal {
+    width: 80% !important;
+    top: 30px !important;
+
+    .ant-modal-header {
+        padding: 0;
+        background: none !important;
+        margin-bottom: 1rem;
+
+        .send-message-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            line-height: 2rem;
+            margin: 1rem;
+        }
+    }
+
+    .ant-modal-body {
+        border-radius: 10px 10px 0 0;
+        background: #eeeeee;
+        box-shadow: 0px 5px 10px #d9d9d9;
+
+    }
+
+    .ant-modal-footer {
+        border-radius: 0 0 10px 10px;
+        background: #eeeeee;
+        box-shadow: 0px 5px 10px #d9d9d9;
+
+
+    }
+
+    .ant-select-selector {
+        border-radius: 50px !important;
+
+        .ant-select-selection-item {
+            border-radius: 50px;
+        }
+    }
+
+    .ant-form-item-control-input-content{
+        border-radius: 16px;
+    }
+    .send-message-btn{
+        height: 44px;
+        padding: 0 1.2rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+}
+
 @keyframes sendmessage {
     0% {}
 
     100% {
-        transform:translateX(15px) scaleZ(.25) rotateX(90deg);
+        transform: translateX(15px) scaleZ(.25) rotateX(90deg);
     }
 }
