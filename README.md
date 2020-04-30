@@ -1,4 +1,4 @@
-# <img src="src/assets/favicon.png" width="70"></img>At-pro
+# <img src="![favicon.png](https://i.loli.net/2020/04/30/4RJDulx8KgPeGAp.png)" width="70"></img>At-pro
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/CALLMELARE/at-pro?style=flat-square) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CALLMELARE/at-pro?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/CALLMELARE/at-pro?style=flat-square) ![GitHub](https://img.shields.io/github/license/CALLMELARE/at-pro?style=flat-square) ![org](https://img.shields.io/badge/organization-TWT%20Studio-blue?style=flat-square)
 
@@ -51,11 +51,6 @@ $ npm run start
 |  Markdown 渲染器  |        Markdown-it         | 10.0.0  |
 |     代码高亮      |        highlight.js        | 9.18.1  |
 | 数据可视化(备用)  |         Bizcharts          |  3.5.8  |
-
-## 预览/Preview
-
-> 登录页
-![login](preview/login.png)
 
 <p align="center"><img src="http://ww1.sinaimg.cn/large/007lrPpNly1gdj0ocf5nuj30ea045weg.jpg" height="50" style=""></img></p>
 
