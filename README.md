@@ -1,4 +1,4 @@
-# <img src="![favicon.png](https://i.loli.net/2020/04/30/4RJDulx8KgPeGAp.png)" width="70"></img>At-pro
+# <img src="https://i.loli.net/2020/04/30/4RJDulx8KgPeGAp.png" width="60"></img>At-pro
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/CALLMELARE/at-pro?style=flat-square) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/CALLMELARE/at-pro?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/CALLMELARE/at-pro?style=flat-square) ![GitHub](https://img.shields.io/github/license/CALLMELARE/at-pro?style=flat-square) ![org](https://img.shields.io/badge/organization-TWT%20Studio-blue?style=flat-square)
 
