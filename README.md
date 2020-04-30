@@ -52,5 +52,10 @@ $ npm run start
 |     代码高亮      |        highlight.js        | 9.18.1  |
 | 数据可视化(备用)  |         Bizcharts          |  3.5.8  |
 
+## 预览/Preview
+
+> 登录页
+![login](preview/login.png)
+
 <p align="center"><img src="http://ww1.sinaimg.cn/large/007lrPpNly1gdj0ocf5nuj30ea045weg.jpg" height="50" style=""></img></p>
 
