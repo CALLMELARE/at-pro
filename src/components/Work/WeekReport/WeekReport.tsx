@@ -1,5 +1,5 @@
 import React from 'react';
-import MdEditor from '../MdUnit/MdEditor';
+import MdEditor from '../../MdUnit/MdEditor';
 import {
     QuestionCircleOutlined,
     SaveOutlined,

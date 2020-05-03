@@ -3,7 +3,7 @@ import Profile from '../components/Profile/Profile';
 import Message from '../components/Message/Message';
 import Work from '../components/Work/Work';
 import Members from '../components/Members/Members';
-import WeekReport from '../components/Work/WeekReport';
+import WeekReport from '../components/Work/WeekReport/WeekReport';
 import MdGuide from '../components/MdUnit/MdGuide';
 import AdminAuthorityManage from '../components/Admin/AuthorityManage';
 import AdminUserManage from '../components/Admin/UserManage';

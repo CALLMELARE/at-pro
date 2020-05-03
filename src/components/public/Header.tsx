@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
-import Notification from '../Work/Notification';
+import Notification from './Notification';
 import { siteTitle } from '../../settings/settings'
 import { Link } from 'react-router-dom';
 import twtlogo from '../../assets/twtlogo_tilt.svg';
