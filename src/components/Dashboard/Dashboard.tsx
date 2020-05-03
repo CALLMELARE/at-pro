@@ -53,7 +53,7 @@ class Dashboard extends Component<any, any> {
             <div>
                 {panelCtrl === "true" ?
                     <div className="admin-home">
-                        <Row gutter={{ xs: 4, sm: 8, md: 12, lg: 16 }}>
+                        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                             <Col span={8}>
                                 <Link to="/Admin/UserManage">
                                     <div className="admin-home-card card-shadow">

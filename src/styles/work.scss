@@ -25,7 +25,41 @@
 .editreport-btn-group {
     display: flex;
     justify-content: flex-end;
+
     .editreport-btn {
         margin: 0.5rem;
+    }
+}
+
+.work-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem;
+    cursor: default;
+}
+
+.work-space {
+    display: flex;
+    justify-content: space-between;
+
+    .work-space-card,
+    ::selection {
+        color: #000000;
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: #ffffff;
+        cursor: pointer;
+
+    }
+
+    .work-space-card {
+        span {
+            font-size: 1.3rem;
+            margin: 0.5rem auto;
+        }
+
     }
 }

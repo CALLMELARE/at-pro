@@ -2,6 +2,7 @@
     margin: 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
+    cursor: default;
 
     .dashboard-title-message {
         margin: 0 0.5rem;
@@ -60,6 +61,7 @@
         font-size: 1.5rem;
         background-color: #ffffff;
         border-radius: 5px;
+        cursor: default;
     }
 
     .admin-home-card:hover {

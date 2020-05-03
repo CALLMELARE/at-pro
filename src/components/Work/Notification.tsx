@@ -1,6 +1,5 @@
 import React from 'react';
-import { Descriptions, Card, Collapse, Drawer } from 'antd';
-import Notification from './Notification';
+import { Drawer } from 'antd';
 import '../../styles/profile.scss';
 
 class Message extends React.PureComponent<any, any> {
@@ -15,7 +14,7 @@ class Message extends React.PureComponent<any, any> {
                     onClose={this.props.onClose}
                     visible={this.props.visible}
                 >
-                    
+
                 </Drawer>
             </div>
         )

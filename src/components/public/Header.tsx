@@ -12,7 +12,18 @@ import {
     HomeOutlined
 } from '@ant-design/icons';
 
+interface Props {
+
+}
+
 class HeaderComponent extends Component<any, any>{
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+            visible: false
+        }
+    }
+
     showDrawer = () => {
         this.setState({
             visible: true,
@@ -46,12 +57,12 @@ class HeaderComponent extends Component<any, any>{
                         </div>
                     </p>
                     : null}
-                <div>
+                <div style={{ marginRight: "1rem" }}>
                     <a className="noti-button" onClick={this.showDrawer}><BellOutlined /></a>
                     <Link className="logout" to="/logout">
                         <LogoutOutlined />
                     </Link>
-                    <Notification visible={this.props.visible} onClose={this.onClose} />
+                    <Notification visible={this.state.visible} onClose={this.onClose} />
                 </div>
             </div>
         )
