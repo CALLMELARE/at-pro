@@ -24,6 +24,8 @@ $ npm run start
 - title 站点名称
 - org 组织名称
 - orgInShort 组织简称
+- debug 是否启用debug模式
+- AdminMode 是否启用后台管理布局(仅限debug模式开启时使用)
 
 #### 配置举例/Configuration Example
 
@@ -32,7 +34,9 @@ $ npm run start
     "ROOT": "https://www.test.com",
     "title": "At",
     "org": "天外天工作室",
-    "orgInShort": "天外天"
+    "orgInShort": "天外天",
+    "debug": "true",
+    "AdminMode": "false"
 }
 ```
 

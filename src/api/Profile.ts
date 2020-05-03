@@ -1,6 +1,6 @@
-export const getLogin = () => {
+export const userinfo = () => {
     return {
-        apiPath: `api/userinfo`,
+        apiPath: `api/user/myinfo`,
         request: {
             method: "GET",
             mode: 'no-cors',

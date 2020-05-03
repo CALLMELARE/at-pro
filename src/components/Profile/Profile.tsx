@@ -1,10 +1,10 @@
 import React from 'react';
-import { Descriptions, Card } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import testUserInfo from '../../test/userinfo';
 import ResetPwd from './ResetPassword';
 import userIcon from '../../assets/usericon.png';
-import helpIcon from '../../assets/help.png';
+import fetchApi from '../../api/callApi';
+import { userinfo } from '../../api/Profile';
 import '../../styles/profile.scss';
 import Noti from '../public/Noti';
 interface profileType {
@@ -45,7 +45,7 @@ class Profile extends React.PureComponent {
         }
     }
 
-    handleMouseOver = (e:any) => {
+    handleMouseOver = (e: any) => {
 
     }
 
@@ -68,6 +68,15 @@ class Profile extends React.PureComponent {
                 <span className="profile-card-info">邮箱：<span>{info.email}</span></span>
             </div>
         )
+    }
+
+    componentDidMount = () => {
+        const { apiPath, request } = userinfo();
+        fetchApi(apiPath, request)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
     }
 
     render() {

@@ -7,11 +7,12 @@ import { UserOutlined, LockOutlined, LoadingOutlined } from '@ant-design/icons';
 import '../styles/login.scss';
 import { getLogin } from '../api/OAuth';
 import fetchApi from '../api/callApi';
-import config from '../site-config.json';
+import { panelCtrl } from '../debug/debug';
+import { org, orgInShort } from '../settings/settings'
 
 const { Content, Footer } = Layout;
 
-const type = false;
+const type = panelCtrl();
 // 是否为超级管理员
 
 interface Props {
@@ -91,7 +92,7 @@ class Login extends Component<any, any> {
                             </Form.Item>
                             <div className="login-buttons">
                                 <div>
-                                    <p>使用{config.orgInShort}账号登录</p>
+                                    <p>使用{orgInShort()}账号登录</p>
                                     <Button type="primary" htmlType="submit" className="login-form-button">登录</Button>
                                 </div>
                                 <Button type="primary" className="login-with-twt-button"><img src={revtwtlogo} height="43" width="43" /></Button>
