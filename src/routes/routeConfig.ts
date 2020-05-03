@@ -5,6 +5,9 @@ import Work from '../components/Work/Work';
 import Members from '../components/Members/Members';
 import WeekReport from '../components/Work/WeekReport';
 import MdGuide from '../components/MdUnit/MdGuide';
+import AdminAuthorityManage from '../components/Admin/AuthorityManage';
+import AdminUserManage from '../components/Admin/UserManage';
+import AdminSystemNotice from '../components/Admin/SystemNotice'
 
 export default [{
     label: "首页",
@@ -26,12 +29,24 @@ export default [{
     label: "成员",
     path: '/Members',
     component: Members,
-},{
+}, {
     label: "编辑周报",
     path: '/Work/EditReport',
     component: WeekReport,
-},{
+}, {
     label: "Markdown导引",
     path: '/Work/MdGuide',
     component: MdGuide,
+}, {
+    label: "后台权限管理",
+    path: '/Admin/AuthorityManage',
+    component: AdminAuthorityManage,
+}, {
+    label: "后台系统公告",
+    path: '/Admin/SystemNotice',
+    component: AdminSystemNotice,
+}, {
+    label: "后台用户管理",
+    path: '/Admin/UserManage',
+    component: AdminUserManage,
 }]

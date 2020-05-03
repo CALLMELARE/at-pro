@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Badge } from 'antd';
 import {
-    MailOutlined
+    MailOutlined,
+    PartitionOutlined,
+    NotificationOutlined,
+    UserSwitchOutlined
 } from '@ant-design/icons';
 import '../../styles/dashboard.scss';
 import { org } from '../../settings/settings'
 import Heatmap from './Heatmap';
 import MdEditor from '../MdUnit/MdEditor';
+import { Link } from 'react-router-dom';
 
 const message = false;
 
@@ -48,7 +52,34 @@ class Dashboard extends Component<any, any> {
         return (
             <div>
                 {panelCtrl === "true" ?
-                    <div></div> :
+                    <div className="admin-home">
+                        <Row gutter={{ xs: 4, sm: 8, md: 12, lg: 16 }}>
+                            <Col span={8}>
+                                <Link to="/Admin/UserManage">
+                                    <div className="admin-home-card card-shadow">
+                                        <UserSwitchOutlined style={{ fontSize: "5rem" }} />
+                                        <span>用户管理</span>
+                                    </div>
+                                </Link>
+                            </Col>
+                            <Col span={8}>
+                                <Link to="/Admin/AuthorityManage">
+                                    <div className="admin-home-card card-shadow">
+                                        <PartitionOutlined style={{ fontSize: "5rem" }} />
+                                        <span>权限管理</span>
+                                    </div>
+                                </Link>
+                            </Col>
+                            <Col span={8}>
+                                <Link to="/Admin/SystemNotice">
+                                    <div className="admin-home-card card-shadow">
+                                        <NotificationOutlined style={{ fontSize: "5rem" }} />
+                                        <span>系统公告</span>
+                                    </div>
+                                </Link>
+                            </Col>
+                        </Row>
+                    </div> :
                     <div>
                         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                             <Col span={12}>

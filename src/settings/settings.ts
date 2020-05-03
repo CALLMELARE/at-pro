@@ -20,3 +20,12 @@ export const orgInShort = () => {
         return lackTip
     }
 }
+
+export const siteTitle = () => {
+    if (config.title) {
+        return config.title
+    } else {
+        console.log(lack + "title<string>字段");
+        return lackTip
+    }
+}
