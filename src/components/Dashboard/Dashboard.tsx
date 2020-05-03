@@ -44,33 +44,38 @@ class Dashboard extends Component<any, any> {
     }
 
     render() {
+        const panelCtrl = sessionStorage.getItem("admin-panel");
         return (
             <div>
-                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                    <Col span={12}>
-                        <div className="dashboard-title">
-                            {this.greeting() + "，" + sessionStorage.getItem("username")}
-                            <a href="/" className="dashboard-title-message">
-                                {message ? <MailOutlined style={{ fontSize: '1.25rem', color: '#00A1E9' }} /> : <MailOutlined style={{ fontSize: '1.25rem', color: '#DDDDDD' }} />}
-                            </a>
-                        </div>
-                        <Card className="card-shadow">
-                            <p>今天是你加入{config.org}的第<span className="join-time">{this.state.joinTime}</span>天</p>
-                            <p><span className="dashboard-bold">账号：</span>testAccount</p>
-                            <p><span className="dashboard-bold">组别：</span>北洋园-随便什么组（成员）</p>
-                        </Card>
-                    </Col>
-                    <Col span={12}>
-                        <div className="dashboard-title">周报</div>
-                        <Card className="card-shadow">
-                            <p className="dashboard-bold">第{202015}期周报：<span className="dashboard-commit-status-not">未提交</span></p>
-                            <p className="dashboard-explain">起止时间：2020/04/07 ~ 2020/04/13</p>
-                            <p className="dashboard-explain">周报截止日期为周一，在时间范围内可以进行编辑。超过编辑时间的周报不能进行编辑。<a href="/Work/EditReport" className="dashboard-to-report">去编辑周报 >></a></p>
-                        </Card>
-                    </Col>
-                </Row>
-                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                </Row>
+                {panelCtrl === "true" ?
+                    <div></div> :
+                    <div>
+                        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                            <Col span={12}>
+                                <div className="dashboard-title">
+                                    {this.greeting() + "，" + sessionStorage.getItem("username")}
+                                    <a href="/" className="dashboard-title-message">
+                                        {message ? <MailOutlined style={{ fontSize: '1.25rem', color: '#00A1E9' }} /> : <MailOutlined style={{ fontSize: '1.25rem', color: '#DDDDDD' }} />}
+                                    </a>
+                                </div>
+                                <Card className="card-shadow">
+                                    <p>今天是你加入{config.org}的第<span className="join-time">{this.state.joinTime}</span>天</p>
+                                    <p><span className="dashboard-bold">账号：</span>testAccount</p>
+                                    <p><span className="dashboard-bold">组别：</span>北洋园-随便什么组（成员）</p>
+                                </Card>
+                            </Col>
+                            <Col span={12}>
+                                <div className="dashboard-title">周报</div>
+                                <Card className="card-shadow">
+                                    <p className="dashboard-bold">第{202015}期周报：<span className="dashboard-commit-status-not">未提交</span></p>
+                                    <p className="dashboard-explain">起止时间：2020/04/07 ~ 2020/04/13</p>
+                                    <p className="dashboard-explain">周报截止日期为周一，在时间范围内可以进行编辑。超过编辑时间的周报不能进行编辑。<a href="/Work/EditReport" className="dashboard-to-report">去编辑周报 >></a></p>
+                                </Card>
+                            </Col>
+                        </Row>
+                        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                        </Row>
+                    </div>}
             </div>
         )
     }

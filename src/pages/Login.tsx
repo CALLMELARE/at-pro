@@ -11,6 +11,9 @@ import config from '../site-config.json';
 
 const { Content, Footer } = Layout;
 
+const type = false;
+// 是否为超级管理员
+
 interface Props {
 }
 
@@ -21,7 +24,6 @@ class Login extends Component<any, any> {
             username: '',
             password: '',
             loading: false,
-            success: true
         };
     }
 
@@ -34,7 +36,7 @@ class Login extends Component<any, any> {
     }
 
     onFinish = (values: any) => {
-        console.log('Received values of form: ', values);
+        // console.log('Received values of form: ', values);
         this.setState({ loading: true, });
         const { apiPath, request } = getLogin(values.username, values.password);
         fetchApi(apiPath, request)
@@ -45,9 +47,15 @@ class Login extends Component<any, any> {
                     sessionStorage.setItem("isLogin", "1");
                     sessionStorage.setItem("username", values.username);
                     this.setState({ loading: false, })
-                    window.location.href = "/";
+                    if (type) {
+                        sessionStorage.setItem("admin-panel", "true");
+                        window.location.href = "/";
+                    } else {
+                        sessionStorage.setItem("admin-panel", "false");
+                        window.location.href = "/";
+                    }
                 } else {
-                    this.setState({ success: false })
+                    this.error()
                 }
             })
     };
@@ -56,7 +64,6 @@ class Login extends Component<any, any> {
         return (
             <Layout className="App">
                 <Content className="login-page">
-                    {this.state.success ? null : this.error()}
                     <Card className="login-card">
                         <h2>登录</h2>
                         <Divider dashed className="divider-dashed" />

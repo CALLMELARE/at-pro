@@ -5,7 +5,7 @@ import {
     MailOutlined,
     CloseOutlined
 } from '@ant-design/icons';
-
+import maskImg from '../../assets/POST-bg.png';
 import '../../styles/message.scss';
 
 interface propType {
@@ -14,7 +14,15 @@ interface propType {
     target: []
 }
 
-const { Option } = Mentions;
+const maskStyle = {
+    backgroundColor: "#f9f9f9",
+    backgroundImage: `url(${maskImg})`,
+    backgroundSize: "90%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center"
+}
+
+const { Option } = Select;
 const { TextArea } = Input;
 
 class SendMessage extends Component<any, any> {
@@ -67,6 +75,8 @@ class SendMessage extends Component<any, any> {
                     <button onClick={this.showModal} className={this.props.btncls}>{this.props.content}</button>
                 </Tooltip>
                 <Modal
+                    className="send-message-modal"
+                    maskStyle={maskStyle}
                     title={this.modalHeader("发送私信")}
                     visible={this.state.visible}
                     onOk={this.handleOk}

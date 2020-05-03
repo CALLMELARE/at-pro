@@ -45,9 +45,13 @@ class Profile extends React.PureComponent {
         }
     }
 
+    handleMouseOver = (e:any) => {
+
+    }
+
     faviconContainer = (info: profileType) => {
         return (
-            <div className="profile-card-left">
+            <div className="profile-card-left" onMouseOver={this.handleMouseOver}>
                 <div className="profile-card-img">
                     <img className="user-icon-upper" src={userIcon} />
                 </div>

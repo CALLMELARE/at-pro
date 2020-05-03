@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import config from '../site-config.json';
+import config from '../../site-config.json';
 import { Layout, Menu, Drawer, Button } from 'antd';
 import {
     HomeOutlined, UserOutlined, LogoutOutlined, MessageOutlined, TeamOutlined, ProjectOutlined
 } from '@ant-design/icons';
-import Footer from './Footer';
-import twtlogo from '../assets/twtlogo_tilt.svg';
+import twtlogo from '../../assets/twtlogo_tilt.svg';
 import { Link } from 'react-router-dom';
 
 const { Sider } = Layout;

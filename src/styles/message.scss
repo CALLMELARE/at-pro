@@ -68,22 +68,17 @@
     }
 }
 
-.ant-modal-mask {
-    background-color: #f9f9f9;
-    background-image: url(../assets/POST-bg.png);
-    background-size: 90%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.ant-modal-content {
-    background-color: transparent;
-    box-shadow: none;
-}
-
-.ant-modal {
+.send-message-modal {
     width: 80% !important;
     top: 30px !important;
+
+    .ant-modal-content {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+
+
 
     .ant-modal-header {
         padding: 0;
@@ -121,10 +116,11 @@
         }
     }
 
-    .ant-form-item-control-input-content{
+    .ant-form-item-control-input-content {
         border-radius: 16px;
     }
-    .send-message-btn{
+
+    .send-message-btn {
         height: 44px;
         padding: 0 1.2rem;
         font-size: 1.4rem;
@@ -132,6 +128,9 @@
     }
 
 }
+
+
+
 
 @keyframes sendmessage {
     0% {}
