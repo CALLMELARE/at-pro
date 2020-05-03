@@ -8,6 +8,7 @@ import MdGuide from '../components/MdUnit/MdGuide';
 import AdminAuthorityManage from '../components/Admin/AuthorityManage';
 import AdminUserManage from '../components/Admin/UserManage';
 import AdminSystemNotice from '../components/Admin/SystemNotice'
+import Sign from '../components/Work/Sign';
 
 export default [{
     label: "首页",
@@ -49,4 +50,8 @@ export default [{
     label: "后台用户管理",
     path: '/Admin/UserManage',
     component: AdminUserManage,
+}, {
+    label: "签到",
+    path: "/Work/Sign",
+    component: Sign,
 }]
