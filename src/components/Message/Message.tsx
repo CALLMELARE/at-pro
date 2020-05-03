@@ -10,7 +10,7 @@ class Message extends React.PureComponent {
     render() {
         return (
             <div>
-                <span className="mes-title">消息中心</span>
+                <p className="mes-title">消息中心</p>
                 <Collapse bordered={false} className="mes-collapse card-shadow">
                     <Panel header="私信" key="1" className="mes-panel">
                     </Panel>

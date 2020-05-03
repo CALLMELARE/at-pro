@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { } from 'antd';
-import Notification from './Notification';
 import '../../styles/work.scss';
 
-class Message extends React.PureComponent {
+class Message extends Component<any,any> {
 
     render() {
         return (
