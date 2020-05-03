@@ -14,7 +14,7 @@ class Message extends Component<any, any> {
                     <Col span={12} >
                         <Link to="/Work/EditReport">
                             <div className="work-space-card card-shadow">
-                                <EditOutlined style={{ fontSize: "5rem" }} />
+                                <EditOutlined style={{ fontSize: "5rem", color: "#CFCFCF" }} />
                                 <span>编辑周报</span>
                             </div>
                         </Link>
@@ -22,7 +22,7 @@ class Message extends Component<any, any> {
                     <Col span={12} >
                         <Link to="">
                             <div className="work-space-card card-shadow">
-                                <BookOutlined style={{ fontSize: "5rem" }} />
+                                <BookOutlined style={{ fontSize: "5rem", color: "#CFCFCF" }} />
                                 <span>工作日志</span>
                             </div>
                         </Link>
