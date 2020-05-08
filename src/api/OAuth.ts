@@ -3,7 +3,7 @@ export const getLogin = (user: string, psw: string) => {
     formdata.append("username", user);
     formdata.append("password", psw);
     return {
-        apiPath: `api/login`,
+        apiPath: `login`,
         request: {
             method: "POST",
             mode: 'no-cors',
@@ -20,7 +20,7 @@ export const resetPassword = (newpwd1: string, newpwd2: string) => {
     formdata.append("newpassword", newpwd1);
     formdata.append("newpasswordagain", newpwd2);
     return {
-        apiPath: `api/resetpa`,
+        apiPath: `resetpa`,
         request: {
             method: "POST",
             mode: 'no-cors',

@@ -7,12 +7,13 @@ import { UserOutlined, LockOutlined, LoadingOutlined } from '@ant-design/icons';
 import '../styles/login.scss';
 import { getLogin } from '../api/OAuth';
 import fetchApi from '../api/callApi';
-import { panelCtrl } from '../debug/debug';
+import { panelCtrl, bypassLogin } from '../debug/debug';
 import { org, orgInShort } from '../settings/settings'
 
 const { Content, Footer } = Layout;
 
 const type = panelCtrl();
+const loginBypass = bypassLogin();
 // 是否为超级管理员
 
 interface Props {
@@ -28,6 +29,14 @@ class Login extends Component<any, any> {
         };
     }
 
+    debug() {
+        Modal.success({
+            title: <p><img src={twtlogo} height="30" width="30" />At</p>,
+            content: '以开发者身份登录成功',
+            okText: "Ok",
+        });
+    }
+
     error() {
         Modal.error({
             title: <p><img src={twtlogo} height="30" width="30" />At</p>,
@@ -38,6 +47,19 @@ class Login extends Component<any, any> {
 
     onFinish = (values: any) => {
         // console.log('Received values of form: ', values);
+        if (loginBypass === true) {
+            this.debug()
+            sessionStorage.setItem("isLogin", "1");
+            sessionStorage.setItem("username", "开发者");
+            this.setState({ loading: false, })
+            if (type) {
+                sessionStorage.setItem("admin-panel", "true");
+                window.location.href = "/";
+            } else {
+                sessionStorage.setItem("admin-panel", "false");
+                window.location.href = "/";
+            }
+        }
         this.setState({ loading: true, });
         const { apiPath, request } = getLogin(values.username, values.password);
         fetchApi(apiPath, request)

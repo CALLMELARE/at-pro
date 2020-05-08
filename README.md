@@ -25,7 +25,8 @@ $ npm run start
 - org 组织名称
 - orgInShort 组织简称
 - debug 是否启用debug模式
-- AdminMode 是否启用后台管理布局(仅限debug模式开启时使用)
+- debugSettings debug模式设置(仅debug模式开启时有效)
+  - AdminMode 是否启用后台管理布局
 
 #### 配置举例/Configuration Example
 
@@ -35,8 +36,11 @@ $ npm run start
     "title": "At",
     "org": "天外天工作室",
     "orgInShort": "天外天",
-    "debug": "true",
-    "AdminMode": "false"
+    "debug": "false",
+    "debugSettings": {
+        "AdminMode": "false",
+        "BypassLogin": "false"
+    }
 }
 ```
 
