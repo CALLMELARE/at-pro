@@ -68,3 +68,47 @@
         cursor: pointer;
     }
 }
+
+.dashboard-mission-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .dashboard-mission-title {
+        font-size: 1.15rem;
+        font-weight: bold;
+        max-width: 50%;
+        overflow: hidden;
+    }
+
+    .dashboard-mission-right {
+        display: flex;
+        flex-direction: row;
+
+        .dashboard-mission-btns {
+            margin: 1rem 1.5rem;
+            .ant-btn{
+                margin: 0 0.5rem;
+            }
+        }
+
+        .dashboard-mission-progress {
+            cursor: pointer;
+            width: 180px;
+            text-align: center;
+
+            p {
+                margin: 0;
+            }
+            .ant-progress{
+                margin: 0.5rem 0;
+            }
+        }
+
+        .ant-statistic-content-value {
+            font-size: 1rem;
+        }
+    }
+}

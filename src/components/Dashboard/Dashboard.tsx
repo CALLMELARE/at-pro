@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Badge } from 'antd';
+import { Row, Col, Card, Badge, Progress, Statistic, Button } from 'antd';
 import {
     MailOutlined,
     PartitionOutlined,
     NotificationOutlined,
-    UserSwitchOutlined
+    UserSwitchOutlined,
+    CalendarOutlined,
+    UserOutlined
 } from '@ant-design/icons';
 import '../../styles/dashboard.scss';
 import { org } from '../../settings/settings'
@@ -13,6 +15,8 @@ import MdEditor from '../MdUnit/MdEditor';
 import { Link } from 'react-router-dom';
 
 const message = false;
+const { Countdown } = Statistic;
+const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30;
 
 interface Props {
     collapsed: boolean,
@@ -22,7 +26,8 @@ class Dashboard extends Component<any, any> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            joinTime: 33
+            joinTime: 33,
+            DDLMouseOver: false
         }
     }
 
@@ -45,6 +50,45 @@ class Dashboard extends Component<any, any> {
             greeting = '夜深了'
         }
         return greeting
+    }
+
+    calcDeadline = (ddl: Date) => {
+        
+        return Date.now()
+    }
+
+    handleDDLClick = (e: any) => {
+        e.preventDefault();
+        this.setState({
+            DDLMouseOver: !this.state.DDLMouseOver
+        })
+    }
+
+    renderMissionList = () => {
+        let list: JSX.Element[] = [];
+        list.push(
+            <div className="dashboard-mission-card card-shadow">
+                <p className="dashboard-mission-title">天外天At系统升级及整合</p>
+                <div className="dashboard-mission-right">
+                    <div className="dashboard-mission-btns">
+                        <Button><UserOutlined /></Button>
+                        <Button><CalendarOutlined /></Button>
+                    </div>
+                    <div className="dashboard-mission-progress" onClick={this.handleDDLClick.bind(this)}>
+                        <p>时间进程</p>
+                        {this.state.DDLMouseOver ?
+                            <Countdown value={deadline} format="D 天 H 时 m 分 s 秒" />
+                            :
+                            <Progress status="active" percent={50} showInfo={false} />}
+                    </div>
+                </div >
+            </div >
+        )
+        return list
+    }
+
+    componentDidMount() {
+
     }
 
     render() {
@@ -105,6 +149,10 @@ class Dashboard extends Component<any, any> {
                             </Col>
                         </Row>
                         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                            <Col span={24}>
+                                <div className="dashboard-title">近期任务</div>
+                                {this.renderMissionList()}
+                            </Col>
                         </Row>
                     </div>}
             </div>
