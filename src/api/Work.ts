@@ -145,7 +145,18 @@ const overviewRecord = () => {
     }
 }
 
+const delRecord = (user: string, id: string) => {
+    // 删除日志
+    return {
+        apiPath: `record/${user}/${id}/delete`,
+        request: {
+            method: "GET",
+            mode: 'no-cors',
+        }
+    }
+}
+
 // 周报系统
 export { delReport, editReport, viewReport, newReport, myReport, overviewReport }
 // 日志系统
-export { viewRecord, uploadRecord, updateRecord, newRecord, overviewRecord }
+export { delRecord,viewRecord, uploadRecord, updateRecord, newRecord, overviewRecord }
