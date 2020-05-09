@@ -7,7 +7,7 @@ import fetchApi from '../../api/callApi';
 import { userinfo } from '../../api/Profile';
 import '../../styles/profile.scss';
 import Noti from '../public/Noti';
-import { url } from 'inspector';
+import { Button, Input, Form } from 'antd';
 
 interface profileType {
     id: number,
@@ -21,12 +21,18 @@ interface profileType {
     auth: number
 }
 
+const layout = {
+    labelCol: { span: 8 },
+    wrapperCol: { span: 8 },
+};
+
 class Profile extends Component<any, any> {
 
     constructor(props: any) {
         super(props);
         this.state = {
-            mouseOver: false
+            imgMouseOver: false,
+            textMouseOver: false
         }
     }
 
@@ -54,23 +60,37 @@ class Profile extends Component<any, any> {
         }
     }
 
-    handleMouseOver = (e: any) => {
+    handleImgMouseOver = (e: any) => {
         e.preventDefault();
         this.setState({
-            mouseOver: true
+            imgMouseOver: true
         })
     }
 
-    handleMouseLeave = (e: any) => {
+    handleImgMouseLeave = (e: any) => {
         e.preventDefault();
         this.setState({
-            mouseOver: false
+            imgMouseOver: false
+        })
+    }
+
+    handleTextMouseOver = (e: any) => {
+        e.preventDefault();
+        this.setState({
+            textMouseOver: true
+        })
+    }
+
+    handleTextMouseLeave = (e: any) => {
+        e.preventDefault();
+        this.setState({
+            textMouseOver: false
         })
     }
 
     faviconContainer = (info: profileType) => {
         return (
-            <div className="profile-card-left" onMouseOver={this.handleMouseOver.bind(this)} onMouseLeave={this.handleMouseLeave.bind(this)}>
+            <div className="profile-card-left" onMouseOver={this.handleImgMouseOver.bind(this)} onMouseLeave={this.handleImgMouseLeave.bind(this)}>
                 <div className="profile-card-img">
                     <img className="user-icon-upper" src={userIcon} />
                 </div>
@@ -80,15 +100,26 @@ class Profile extends Component<any, any> {
 
     textList = (info: profileType) => {
         return (
-            this.state.mouseOver ?
+            this.state.imgMouseOver ?
                 <div className="profile-card-right">
                     <span className="profile-card-info">账号：<span>{info.username}</span></span>
                     <span className="profile-card-info">姓名：<span>{info.name + "  " + info.studentid}</span></span>
                     <span className="profile-card-info">组别：<span>{info.team + "  " + this.getAuthName(info.auth)}</span></span>
                     <span className="profile-card-info">邮箱：<span>{info.email}</span></span>
                 </div> :
-                <div className="profile-card-right-text" >
-                    有些人生命里出现一次就够了，遇到是我的幸运。
+                <div className="profile-card-right-text" onMouseOver={this.handleTextMouseOver.bind(this)} onMouseLeave={this.handleTextMouseLeave.bind(this)}>
+                    {this.state.textMouseOver ?
+                        <div>
+                            <Form {...layout}>
+                                <Form.Item label="选择头像">
+                                    <Button>+</Button>
+                                </Form.Item>
+                                <Form.Item label="更改签名">
+                                    <Input></Input>
+                                </Form.Item>
+                            </Form>
+                        </div>
+                        : "有些人生命里出现一次就够了，遇到是我的幸运。"}
                 </div>
         )
     }
