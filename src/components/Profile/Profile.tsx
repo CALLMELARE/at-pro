@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import testUserInfo from '../../test/userinfo';
 import ResetPwd from './ResetPassword';
@@ -7,7 +7,7 @@ import fetchApi from '../../api/callApi';
 import { userinfo } from '../../api/Profile';
 import '../../styles/profile.scss';
 import Noti from '../public/Noti';
-import TweenOne from 'rc-tween-one';
+import { url } from 'inspector';
 
 interface profileType {
     id: number,
@@ -21,7 +21,14 @@ interface profileType {
     auth: number
 }
 
-class Profile extends React.PureComponent {
+class Profile extends Component<any, any> {
+
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            mouseOver: false
+        }
+    }
 
     getAuthName(authType: number) {
         if (authType === 0 || authType === 1 || authType === 2) {
@@ -48,12 +55,22 @@ class Profile extends React.PureComponent {
     }
 
     handleMouseOver = (e: any) => {
+        e.preventDefault();
+        this.setState({
+            mouseOver: true
+        })
+    }
 
+    handleMouseLeave = (e: any) => {
+        e.preventDefault();
+        this.setState({
+            mouseOver: false
+        })
     }
 
     faviconContainer = (info: profileType) => {
         return (
-            <div className="profile-card-left" onMouseOver={this.handleMouseOver}>
+            <div className="profile-card-left" onMouseOver={this.handleMouseOver.bind(this)} onMouseLeave={this.handleMouseLeave.bind(this)}>
                 <div className="profile-card-img">
                     <img className="user-icon-upper" src={userIcon} />
                 </div>
@@ -63,12 +80,16 @@ class Profile extends React.PureComponent {
 
     textList = (info: profileType) => {
         return (
-            <div className="profile-card-right">
-                <span className="profile-card-info">账号：<span>{info.username}</span></span>
-                <span className="profile-card-info">姓名：<span>{info.name + "  " + info.studentid}</span></span>
-                <span className="profile-card-info">组别：<span>{info.team + "  " + this.getAuthName(info.auth)}</span></span>
-                <span className="profile-card-info">邮箱：<span>{info.email}</span></span>
-            </div>
+            this.state.mouseOver ?
+                <div className="profile-card-right">
+                    <span className="profile-card-info">账号：<span>{info.username}</span></span>
+                    <span className="profile-card-info">姓名：<span>{info.name + "  " + info.studentid}</span></span>
+                    <span className="profile-card-info">组别：<span>{info.team + "  " + this.getAuthName(info.auth)}</span></span>
+                    <span className="profile-card-info">邮箱：<span>{info.email}</span></span>
+                </div> :
+                <div className="profile-card-right-text" >
+                    有些人生命里出现一次就够了，遇到是我的幸运。
+                </div>
         )
     }
 
@@ -86,7 +107,7 @@ class Profile extends React.PureComponent {
         return (
             <div>
                 <div className="ant-descriptions-title">个人信息</div>
-                <div className="profile-card">
+                <div className="profile-card card-shadow">
                     {this.faviconContainer(testUserInfo)}
                     {this.textList(testUserInfo)}
                     <div className="profile-help">
