@@ -6,6 +6,9 @@
 }
 
 .mem-container {
+    .ant-tabs-tabpane {
+        box-shadow: 0 0 20px #D9D9D9;
+    }
 
     // margin: 0 10%;
     .mem-tabs {
@@ -30,7 +33,7 @@
                     padding: 0.5rem 1rem;
                     margin: 1rem 0;
                     cursor: default;
-                    
+
                     .mem-mail-icon {
                         margin: 0 0.7rem;
                         cursor: pointer;
