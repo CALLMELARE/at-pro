@@ -26,6 +26,7 @@
     "lodash": "^4.17.15",
     "markdown-it": "^10.0.0",
     "node-sass": "^4.13.1",
+    "rc-tween-one": "^2.6.8",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
