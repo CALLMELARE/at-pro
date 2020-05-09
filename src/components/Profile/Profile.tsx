@@ -7,6 +7,8 @@ import fetchApi from '../../api/callApi';
 import { userinfo } from '../../api/Profile';
 import '../../styles/profile.scss';
 import Noti from '../public/Noti';
+import TweenOne from 'rc-tween-one';
+
 interface profileType {
     id: number,
     username: string,

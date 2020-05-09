@@ -36,18 +36,15 @@
             background-position: center;
             background-size: 40%;
             width: 200px;
+            transition: all 0.3s linear;
 
             .user-icon-upper {
                 width: 200px;
             }
 
         }
-    }
-
-    .profile-card-left:hover {
-        .user-icon-upper {
-            animation-fill-mode: forwards;
-            animation: imgLeave 1s;
+        .profile-card-img:hover{
+            transform: translateX(-80px) scale(0.7);
         }
     }
 
@@ -69,8 +66,3 @@
     }
 }
 
-@keyframes imgLeave {
-    100% {
-        transform: translate(-100px) scale(0.7);
-    }
-}
