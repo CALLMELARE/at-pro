@@ -92,6 +92,7 @@
     .sign-card-btns {
         display: flex;
         justify-content: center;
+
         .sign-card-btn {
             margin: 1rem;
             height: 6rem;
@@ -315,11 +316,37 @@
     }
 }
 
-.leave-card{
+.leave-card {
     background-color: #ffffff;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1.5rem;
+
+    p {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .leave-card-reason {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .leave-card-explain {
+        margin: 1rem 0;
+    }
+
+    .leave-card-btns {
+        display: flex;
+        justify-content: space-around;
+
+        .leave-card-back {}
+
+        .leave-card-commit {
+            background: #45484E;
+            color: #ffffff;
+        }
+    }
 }
