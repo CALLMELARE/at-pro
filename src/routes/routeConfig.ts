@@ -8,7 +8,10 @@ import MdGuide from '../components/MdUnit/MdGuide';
 import AdminAuthorityManage from '../components/Admin/AuthorityManage';
 import AdminUserManage from '../components/Admin/UserManage';
 import AdminSystemNotice from '../components/Admin/SystemNotice'
-import Sign from '../components/Work/Sign';
+import Sign from '../components/Work/Meeting/Sign';
+import MeetingHistory from '../components/Work/Meeting/MeetingHistory';
+import Leave from '../components/Work/Meeting/Leave';
+import Meeting from '../components/Work/Meeting/Meeting';
 
 export default [{
     label: "首页",
@@ -54,4 +57,17 @@ export default [{
     label: "签到",
     path: "/Work/Sign",
     component: Sign,
-}]
+}, {
+    label: "请假",
+    path: "/Work/Leave",
+    component: Leave,
+}, {
+    label: "历史会议",
+    path: "/Work/HistoryMeeting",
+    component: MeetingHistory
+}, {
+    label: "未完成会议",
+    path: "/Work/Meeting",
+    component: Meeting
+},
+]

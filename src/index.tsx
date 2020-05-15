@@ -6,8 +6,9 @@ import AtStore from './store/reducers';
 import RouteConfig from './Router';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from "react-redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const store = createStore(AtStore)
+const store = createStore(AtStore, composeWithDevTools())
 
 const Root = () => (
   <Provider store={store} >
