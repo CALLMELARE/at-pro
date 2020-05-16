@@ -384,3 +384,62 @@
         }
     }
 }
+
+.report-card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+
+    .report-header {
+
+        .report-icon {
+            width: 60%;
+
+            img {
+                width: inherit;
+            }
+        }
+
+        .report-basic {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+
+            .report-basic-title {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+            .report-basic-last {}
+        }
+
+        .report-btns {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .ant-row {
+                display: flex;
+                justify-content: center;
+            }
+
+            .report-btn-edit {
+                line-height: 1.5rem;
+                margin: 1rem;
+                background: #45484E;
+                color: #ffffff;
+            }
+
+            .report-btn-other {
+                line-height: 1.5rem;
+                margin: 1rem;
+            }
+        }
+    }
+
+    .report-content {}
+}
