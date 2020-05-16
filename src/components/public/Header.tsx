@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
+import { Layout, Badge } from 'antd';
 import Notification from './Notification';
 import { siteTitle } from '../../settings/settings'
 import { Link } from 'react-router-dom';
@@ -12,15 +12,23 @@ import {
     HomeOutlined
 } from '@ant-design/icons';
 
-interface Props {
 
+export interface Props {
+    collapsed: boolean,
+    toggle: any
 }
 
-class HeaderComponent extends Component<any, any>{
+export interface State {
+    notiCount: number,
+    visible: boolean
+}
+
+class HeaderComponent extends Component<Props, State>{
     constructor(props: Props) {
         super(props);
         this.state = {
-            visible: false
+            visible: false,
+            notiCount: 0
         }
     }
 

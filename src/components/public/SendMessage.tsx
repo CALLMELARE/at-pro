@@ -8,10 +8,16 @@ import {
 import maskImg from '../../assets/POST-bg.png';
 import '../../styles/message.scss';
 
-interface propType {
+interface Props {
     btncls: string,
     content: JSX.Element | string,
     target: []
+}
+
+interface State {
+    visible: boolean,
+    post: boolean,
+    prefix: string
 }
 
 const maskStyle = {
@@ -25,8 +31,8 @@ const maskStyle = {
 const { Option } = Select;
 const { TextArea } = Input;
 
-class SendMessage extends Component<any, any> {
-    constructor(props: propType) {
+class SendMessage extends Component<Props, State> {
+    constructor(props: Props) {
         super(props)
         this.state = {
             post: false,

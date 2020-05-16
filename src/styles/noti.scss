@@ -1,0 +1,32 @@
+.noti-card {
+    margin: 0.5rem;
+    padding: 1rem;
+    background: #eeeeee;
+    border-radius: 5px;
+
+    .noti-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+
+        .noti-from {
+            font-size: 0.8rem;
+            color: #a9a9a9;
+            font-weight: normal;
+        }
+    }
+
+    .noti-content {
+        display: flex;
+        flex-direction: column;
+        .noti-text {
+            margin: 0.5rem 0;
+        }
+
+        .noti-time {
+            font-size: 0.8rem;
+            color: #a9a9a9;
+        }
+    }
+}
