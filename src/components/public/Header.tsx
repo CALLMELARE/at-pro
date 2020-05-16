@@ -12,10 +12,10 @@ import {
     HomeOutlined
 } from '@ant-design/icons';
 
-
 export interface Props {
-    collapsed: boolean,
-    toggle: any
+    toggle: any,
+    visible: boolean,
+    collapsed: boolean
 }
 
 export interface State {
@@ -43,6 +43,7 @@ class HeaderComponent extends Component<Props, State>{
             visible: false,
         });
     };
+
     render() {
         const panelCtrl = sessionStorage.getItem("admin-panel");
         return (

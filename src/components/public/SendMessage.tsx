@@ -11,7 +11,7 @@ import '../../styles/message.scss';
 interface Props {
     btncls: string,
     content: JSX.Element | string,
-    target: []
+    target?: number[]
 }
 
 interface State {

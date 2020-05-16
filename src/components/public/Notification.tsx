@@ -9,14 +9,12 @@ export interface Props {
 }
 
 export interface State {
-
 }
 
 class Message extends Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            count: 0
         };
     }
 

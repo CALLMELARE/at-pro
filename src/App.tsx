@@ -14,6 +14,15 @@ import './styles/common.scss';
 import HeaderComponent from './components/public/Header';
 const { Header, Content } = Layout;
 
+export interface Props {
+
+}
+
+export interface State {
+  collapsed: boolean,
+  visible: boolean
+}
+
 function getRoute() {
   const routeList: any = [];
   routes.forEach((rt) => {
@@ -32,11 +41,14 @@ function getRoute() {
   return routeList;
 }
 
-class App extends Component<any, any> {
-  state = {
-    collapsed: true,
-    visible: false
-  };
+class App extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      collapsed: true,
+      visible: false
+    };
+  }
 
   toggle = () => {
     this.setState({
@@ -51,7 +63,7 @@ class App extends Component<any, any> {
         {panelCtrl === "true" ? null : < SiderCustom collapsed={this.state.collapsed} />}
         <Layout className="site-layout">
           <Header className="header-background" style={{ padding: 0 }}>
-            <HeaderComponent toggle={this.toggle} visible={this.state.visible} />
+            <HeaderComponent collapsed={this.state.collapsed} toggle={this.toggle} visible={this.state.visible} />
           </Header>
           <Content className="content-background">
             <div className="widCtrl">
