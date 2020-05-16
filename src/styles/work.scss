@@ -350,3 +350,28 @@
         }
     }
 }
+
+.hismetting-card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+
+    .hismetting-search {
+        width: 100%;
+        padding: 0 20%;
+    }
+
+    .hismetting-list {
+        .hismetting-list-title {
+            font-weight: bold;
+        }
+        span{
+            span{
+                margin: 0 1.5rem 0 0;
+            }
+        }
+    }
+}
