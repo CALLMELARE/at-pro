@@ -4,7 +4,6 @@ import '../../styles/message.scss';
 
 const { Panel } = Collapse;
 
-
 class Message extends React.PureComponent {
 
     render() {

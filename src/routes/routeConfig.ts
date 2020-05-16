@@ -13,6 +13,7 @@ import MeetingHistory from '../components/Work/Meeting/MeetingHistory';
 import Leave from '../components/Work/Meeting/Leave';
 import Meeting from '../components/Work/Meeting/Meeting';
 import WeekReport from '../components/Work/WeekReport/WeekReport';
+import Discuss from '../components/Work/Discuss/Discuss';
 
 export default [{
     label: "首页",
@@ -74,5 +75,9 @@ export default [{
     label: "未完成会议",
     path: "/Work/Meeting",
     component: Meeting
+},{
+    label: "讨论区",
+    path: "/Work/Discuss",
+    component: Discuss
 },
 ]

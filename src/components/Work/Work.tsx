@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { EditOutlined, BookOutlined } from '@ant-design/icons';
+import { EditOutlined, CommentOutlined } from '@ant-design/icons';
 import { Row, Col, Tabs, Table } from 'antd';
 import Donut from '../public/ActivityDonut';
 import '../../styles/work.scss';
@@ -70,10 +70,10 @@ class Message extends Component<any, any> {
                         </Link>
                     </Col>
                     <Col span={12} >
-                        <Link to="">
+                        <Link to="/Work/Discuss">
                             <div className="work-space-card card-shadow">
-                                <BookOutlined style={{ fontSize: "5rem", color: "#CFCFCF" }} />
-                                <span>工作日志</span>
+                                <CommentOutlined style={{ fontSize: "5rem", color: "#CFCFCF" }} />
+                                <span>讨论区</span>
                             </div>
                         </Link>
                     </Col>

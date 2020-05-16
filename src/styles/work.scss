@@ -217,7 +217,7 @@
     }
 
     .work-tab-titles {
-        margin: 0 1rem;
+        margin: 0 2rem;
 
         .work-tab-title {
             text-align: center;
@@ -230,14 +230,15 @@
         .work-tab-item {
             background: #ffffff;
             text-align: center;
-            margin: 1rem;
+            margin: 1rem 2rem;
             border-radius: 15px;
             line-height: 2.5rem;
 
             a {
                 color: #000000;
             }
-            a:hover{
+
+            a:hover {
                 font-weight: bold;
             }
         }
@@ -370,6 +371,16 @@
             span {
                 margin: 0 1.5rem 0 0;
             }
+        }
+    }
+}
+
+.discuss {
+    background-image: url(../assets/PROJECT-bg.png);
+
+    .discuss-badges {
+        .ant-badge {
+            margin: 0 0.5rem;
         }
     }
 }
