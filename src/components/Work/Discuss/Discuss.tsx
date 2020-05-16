@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Badge, Col, Row, Progress } from 'antd';
 import discussData from '../../../test/discuss';
+import maskImg from '../../../assets/PROJECT-bg.png';
 
 export interface Props {
 
@@ -8,6 +9,13 @@ export interface Props {
 
 export interface State {
 
+}
+
+const bgStyle={
+    backgroundImage: `url(${maskImg})`,
+    backgroundSize: "70%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center"
 }
 
 class Discuss extends React.Component<Props, State> {
@@ -73,7 +81,7 @@ class Discuss extends React.Component<Props, State> {
 
     render() {
         return (
-            <div className="discuss">
+            <div className="discuss" style={bgStyle}>
                 <div className="work-title">工作讨论区</div>
                 <p className="discuss-badges">
                     {this.statusPoint(1, true)}
