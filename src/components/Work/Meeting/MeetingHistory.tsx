@@ -54,6 +54,8 @@ class MeetingHistory extends Component<Props, State> {
                 <div className="hismetting-card card-shadow">
                     <div className="hismetting-search">
                         <Search
+                            style={{ display: "none" }}
+                            // 感觉没什么用，隐藏了
                             prefix={"会议名称 ："}
                             placeholder="input search text"
                             onSearch={(value: any) => console.log(value)}

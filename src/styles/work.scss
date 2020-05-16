@@ -216,32 +216,29 @@
         }
     }
 
-    .ant-table-container {
-        .ant-table {
-            background: #EEEEEE;
-        }
+    .work-tab-titles {
+        margin: 0 1rem;
 
-        .ant-table-thead {
-            .ant-table-cell {
-                text-align: center;
-                color: rgb(134, 134, 134);
-                background: #EEEEEE;
-                border: none;
+        .work-tab-title {
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+    }
+
+
+    .work-tab-list {
+        .work-tab-item {
+            background: #ffffff;
+            text-align: center;
+            margin: 1rem;
+            border-radius: 15px;
+            line-height: 2.5rem;
+
+            a {
+                color: #000000;
             }
-        }
-
-        .ant-table-tbody {
-            background: #EEEEEE;
-
-            .ant-table-row {
-                .ant-table-cell {
-                    text-align: center;
-                    border: none;
-                    cursor: pointer;
-                }
-
-                border: none;
-                border-radius: 20px;
+            a:hover{
+                font-weight: bold;
             }
         }
     }
@@ -368,8 +365,9 @@
         .hismetting-list-title {
             font-weight: bold;
         }
-        span{
-            span{
+
+        span {
+            span {
                 margin: 0 1.5rem 0 0;
             }
         }

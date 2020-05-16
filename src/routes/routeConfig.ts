@@ -3,7 +3,7 @@ import Profile from '../components/Profile/Profile';
 import Message from '../components/Message/Message';
 import Work from '../components/Work/Work';
 import Members from '../components/Members/Members';
-import WeekReport from '../components/Work/WeekReport/WeekReport';
+import WeekReportEdit from '../components/Work/WeekReport/WeekReportEdit';
 import MdGuide from '../components/MdUnit/MdGuide';
 import AdminAuthorityManage from '../components/Admin/AuthorityManage';
 import AdminUserManage from '../components/Admin/UserManage';
@@ -12,6 +12,7 @@ import Sign from '../components/Work/Meeting/Sign';
 import MeetingHistory from '../components/Work/Meeting/MeetingHistory';
 import Leave from '../components/Work/Meeting/Leave';
 import Meeting from '../components/Work/Meeting/Meeting';
+import WeekReport from '../components/Work/WeekReport/WeekReport';
 
 export default [{
     label: "首页",
@@ -33,10 +34,14 @@ export default [{
     label: "成员",
     path: '/Members',
     component: Members,
-}, {
+},  {
+    label: "周报",
+    path: '/Work/Report',
+    component: WeekReport,
+},{
     label: "编辑周报",
     path: '/Work/EditReport',
-    component: WeekReport,
+    component: WeekReportEdit,
 }, {
     label: "Markdown导引",
     path: '/Work/MdGuide',
