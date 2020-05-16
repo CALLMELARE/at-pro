@@ -383,6 +383,43 @@
             margin: 0 0.5rem;
         }
     }
+
+    .discuss-items {
+
+        .discuss-item {
+            background-color: #ffffff;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1.5rem;
+            margin: 0.5rem;
+
+            .discuss-item-title {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            .discuss-item-content {
+                margin-left: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 5rem;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .discuss-item-text1 {}
+
+                .discuss-item-text2 {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
 }
 
 .report-card {
