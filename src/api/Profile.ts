@@ -8,6 +8,7 @@ export const userinfo = () => {
             headers: {
                 "Content-Type": "application/json",
             },
+            credentials: 'include'
         }
     }
 }

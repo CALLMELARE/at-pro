@@ -8,10 +8,11 @@ const getLogin = (user: string, psw: string) => {
             method: "POST",
             mode: 'no-cors',
             headers: {
-                "Authorization":"token",
+                "Authorization": "token",
                 "Content-Type": "application/json",
             },
             body: formdata,
+            credentials: 'include'
         }
     }
 }
@@ -22,6 +23,7 @@ const getLogout = () => {
         request: {
             method: "GET",
             mode: 'no-cors',
+            credentials: 'include'
         }
     }
 }
@@ -39,6 +41,7 @@ const resetPassword = (newpwd1: string, newpwd2: string) => {
                 "Content-Type": "application/json",
             },
             body: formdata,
+            credentials: 'include'
         }
     }
 }

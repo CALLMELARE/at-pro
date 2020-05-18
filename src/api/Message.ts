@@ -13,7 +13,8 @@ const postMessage = (toid: string, topic: string, message: string, file: string)
             headers: {
                 "Content-Type": "application/json",
             },
-            body: formdata
+            body: formdata,
+            credentials: 'include'
         }
     }
 }
@@ -24,7 +25,8 @@ const listMessage = () => {
         apiPath: `message`,
         request: {
             method: "GET",
-            mode: 'no-cors',
+            mode: 'no-cors', 
+            credentials: 'include'
         }
     }
 }
@@ -36,6 +38,7 @@ const viewMessage = (id: string) => {
         request: {
             method: "GET",
             mode: 'no-cors',
+            credentials: 'include'
         }
     }
 }

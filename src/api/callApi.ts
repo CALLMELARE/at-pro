@@ -5,7 +5,7 @@ const API_ROOT = config.ROOT;
 interface req {
   headers?: any,
   body?: any,
-  method?: string
+  method?: string,
 }
 
 const fetchApi = (apiPath: string, request: req = {}) => {
