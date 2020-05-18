@@ -60,7 +60,7 @@ class App extends Component<Props, State> {
     const panelCtrl = sessionStorage.getItem("admin-panel");
     return (
       <Layout className="App">
-        {panelCtrl === "true" ? null : < SiderCustom collapsed={this.state.collapsed} />}
+        {panelCtrl === "true" ? null : <SiderCustom collapsed={this.state.collapsed} />}
         <Layout className="site-layout">
           <Header className="header-background" style={{ padding: 0 }}>
             <HeaderComponent collapsed={this.state.collapsed} toggle={this.toggle} visible={this.state.visible} />

@@ -11,7 +11,8 @@ import {
 import '../../styles/dashboard.scss';
 import { org } from '../../settings/settings'
 import Heatmap from './Heatmap';
-import MdEditor from '../MdUnit/MdEditor';
+// import { userName } from '../../actions'
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const message = false;
@@ -53,7 +54,7 @@ class Dashboard extends Component<any, any> {
     }
 
     calcDeadline = (ddl: Date) => {
-        
+
         return Date.now()
     }
 
