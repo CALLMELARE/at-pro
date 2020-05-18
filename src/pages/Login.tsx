@@ -66,9 +66,10 @@ class Login extends Component<any, any> {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                let loginData = data.data;
                 if (data.message === "登录成功") {
                     sessionStorage.setItem("isLogin", "1");
-                    sessionStorage.setItem("username", values.username);
+                    sessionStorage.setItem("username", loginData.name);
                     this.setState({ loading: false, })
                     if (type) {
                         sessionStorage.setItem("admin-panel", "true");

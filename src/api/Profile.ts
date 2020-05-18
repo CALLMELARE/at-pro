@@ -1,4 +1,5 @@
 export const userinfo = () => {
+    // 用户基本信息
     return {
         apiPath: `user/myinfo`,
         request: {

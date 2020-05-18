@@ -159,4 +159,4 @@ const delRecord = (user: string, id: string) => {
 // 周报系统
 export { delReport, editReport, viewReport, newReport, myReport, overviewReport }
 // 日志系统
-export { delRecord,viewRecord, uploadRecord, updateRecord, newRecord, overviewRecord }
+export { }

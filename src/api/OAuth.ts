@@ -1,4 +1,4 @@
-export const getLogin = (user: string, psw: string) => {
+const getLogin = (user: string, psw: string) => {
     let formdata = new FormData();
     formdata.append("username", user);
     formdata.append("password", psw);
@@ -15,7 +15,17 @@ export const getLogin = (user: string, psw: string) => {
     }
 }
 
-export const resetPassword = (newpwd1: string, newpwd2: string) => {
+const getLogout = () => {
+    return {
+        apiPath: `api/logout`,
+        request: {
+            method: "GET",
+            mode: 'no-cors',
+        }
+    }
+}
+
+const resetPassword = (newpwd1: string, newpwd2: string) => {
     let formdata = new FormData();
     formdata.append("newpassword", newpwd1);
     formdata.append("newpasswordagain", newpwd2);
@@ -31,3 +41,5 @@ export const resetPassword = (newpwd1: string, newpwd2: string) => {
         }
     }
 }
+
+export { getLogin, getLogout, resetPassword }
