@@ -68,7 +68,7 @@ class Dashboard extends Component<any, any> {
     renderMissionList = () => {
         let list: JSX.Element[] = [];
         list.push(
-            <div className="dashboard-mission-card card-shadow">
+            <div className="dashboard-mission-card card-shadow" key={0}>
                 <p className="dashboard-mission-title">天外天At系统升级及整合</p>
                 <div className="dashboard-mission-right">
                     <div className="dashboard-mission-btns">

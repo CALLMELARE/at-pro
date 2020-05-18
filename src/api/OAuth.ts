@@ -17,7 +17,7 @@ const getLogin = (user: string, psw: string) => {
 
 const getLogout = () => {
     return {
-        apiPath: `api/logout`,
+        apiPath: `logout`,
         request: {
             method: "GET",
             mode: 'no-cors',

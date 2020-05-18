@@ -55,7 +55,7 @@ class Discuss extends React.Component<Props, State> {
         const list: JSX.Element[] = [];
         data.map((item) => {
             list.push(
-                <Col span={12} >
+                <Col span={12} key={0}>
                     <div className="discuss-item card-shadow">
                         <div>
                             <span className="discuss-item-title">{this.statusPoint(item.status, false)}{item.title}</span>

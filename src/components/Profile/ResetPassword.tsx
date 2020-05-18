@@ -1,5 +1,6 @@
 import { Form, Input, Button, message, Popconfirm } from 'antd';
 import React, { Component } from 'react';
+import fetchApi from '../../api/callApi';
 import { resetPassword } from '../../api/OAuth';
 
 interface formType {
@@ -26,7 +27,13 @@ class ResetPwd extends Component<any, any> {
         // console.log(values.newpw2);
         if (values.newpw1 === values.newpw2) {
             // 在这里发出修改请求
-            message.success("修改成功")
+            message.warning("正在保存…")
+            const { apiPath, request } = resetPassword(values.newpw1, values.newpw2);
+            fetchApi(apiPath, request)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                })
         } else {
             message.error("两次密码输入不一致")
         }
