@@ -7,6 +7,7 @@ import {
 } from '@ant-design/icons';
 import maskImg from '../../assets/POST-bg.png';
 import '../../styles/message.scss';
+import PictureWall from './PicturesWall';
 
 interface Props {
     btncls: string,
@@ -102,6 +103,9 @@ class SendMessage extends Component<Props, State> {
                         </Form.Item>
                         <Form.Item>
                             <TextArea rows={12} onChange={this.onChange} autoFocus={false} />
+                        </Form.Item>
+                        <Form.Item>
+                            <PictureWall></PictureWall>
                         </Form.Item>
                     </Form>
                 </Modal>

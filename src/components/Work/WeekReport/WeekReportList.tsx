@@ -104,7 +104,7 @@ class WeekReportList extends Component<Props, State> {
                         </Panel>
                     </Collapse>
                     <Link to="/Work/Report" className="reportlist-back">
-                        <Button >返回</Button>
+                        <Button>返回</Button>
                     </Link>
                 </div>
             </div>
