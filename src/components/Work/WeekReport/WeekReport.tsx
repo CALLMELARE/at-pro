@@ -34,9 +34,11 @@ class WeekReport extends React.Component<Props, State> {
                         <Col span={10} className="report-btns">
                             <Row >
                                 <Link to={`/Work/EditReport?id=${0}`}>
-                                <Button className="report-btn-edit">去编辑</Button>
+                                    <Button className="report-btn-edit">去编辑</Button>
                                 </Link>
-                                <Button className="report-btn-other">随便看看</Button>
+                                <Link to={`/Work/ReportList`}>
+                                    <Button className="report-btn-other">随便看看</Button>
+                                </Link>
                             </Row>
                         </Col>
                     </Row>

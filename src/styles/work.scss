@@ -478,3 +478,75 @@
 
     .report-content {}
 }
+
+.reportlist-card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+
+    .reportlist-select-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+
+    .ant-collapse {
+        border: none;
+
+        .ant-collapse-item {
+            border: none;
+        }
+
+        .ant-collapse-header {
+            background: #eeeeee;
+            border-radius: 10px !important;
+        }
+
+        .ant-collapse-content {
+            border: none;
+        }
+    }
+
+    .reportlist-item {
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        color: #000000;
+        border-bottom: 1px solid #d9d9d9;
+        margin: 1rem;
+        font-size: 1.2rem;
+
+        .reportlist-item-name {
+            font-weight: bold;
+        }
+
+        .reportlist-item-status {
+            font-weight: bold;
+
+            .yes {
+                color: #89C997;
+            }
+
+            .yes:hover {
+                text-shadow: 0 0 30px #89C997;
+            }
+
+            .no {
+                color: #F8B551;
+            }
+
+            .no:hover {
+                text-shadow: 0 0 30px #F8B551;
+            }
+        }
+    }
+
+    .reportlist-back {
+        display: flex;
+        justify-content: flex-end;
+        margin: 1rem;
+    }
+}

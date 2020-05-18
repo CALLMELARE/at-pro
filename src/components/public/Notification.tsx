@@ -23,7 +23,7 @@ class Message extends Component<Props, State> {
         let list: JSX.Element[] = [];
         data.map((item) => {
             list.push(
-                <div className="noti-card">
+                <div className="noti-card" key={item.id}>
                     <span className="noti-title">{item.topic}
                         <span className="noti-from">{item.from}</span>
                     </span>

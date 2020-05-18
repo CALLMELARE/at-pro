@@ -4,12 +4,16 @@ import * as serviceWorker from './serviceWorker';
 // import { createStore, Store } from 'redux';
 import RouteConfig from './Router';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
 // import { Provider } from "react-redux";
 // import { composeWithDevTools } from 'redux-devtools-extension';
 
 const Root = () => (
   <Router>
-    <RouteConfig />
+    <ConfigProvider locale={zhCN}>
+      <RouteConfig />
+    </ConfigProvider>
   </Router>
 )
 

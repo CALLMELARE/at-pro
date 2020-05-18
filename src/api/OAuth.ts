@@ -8,6 +8,7 @@ const getLogin = (user: string, psw: string) => {
             method: "POST",
             mode: 'no-cors',
             headers: {
+                "Authorization":"token",
                 "Content-Type": "application/json",
             },
             body: formdata,
