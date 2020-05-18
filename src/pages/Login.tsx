@@ -8,7 +8,7 @@ import '../styles/login.scss';
 import { getLogin } from '../api/OAuth';
 import fetchApi from '../api/callApi';
 import { panelCtrl, bypassLogin } from '../debug/debug';
-import { org, orgInShort } from '../settings/settings'
+import { org, orgInShort } from '../settings/settings';
 
 const { Content, Footer } = Layout;
 
