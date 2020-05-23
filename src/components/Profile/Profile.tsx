@@ -150,6 +150,7 @@ class Profile extends Component<any, any> {
                         />
                     </div>
                 </div>
+
                 <div className="ant-descriptions-title">修改密码</div>
                 <ResetPwd />
             </div>

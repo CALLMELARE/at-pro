@@ -29,6 +29,9 @@ const fetchApi = (apiPath: string, request: req = {}) => {
     if (auth) {
       customRequest.headers.Authentication = auth;
     }
+    if (sessionStorage.getItem("isLogin") === "1") {
+      customRequest.headers['token'] = localStorage.getItem("token");
+    }
   }
   return fetch(fullUrl, customRequest);
 };

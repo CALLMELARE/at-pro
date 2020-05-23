@@ -12,7 +12,6 @@ const getLogin = (user: string, psw: string) => {
                 "Content-Type": "application/json",
             },
             body: formdata,
-            credentials: 'include'
         }
     }
 }
@@ -38,6 +37,7 @@ const resetPassword = (newpwd1: string, newpwd2: string) => {
             method: "POST",
             mode: 'no-cors',
             headers: {
+                "Authorization": "token",
                 "Content-Type": "application/json",
             },
             body: formdata,

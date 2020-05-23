@@ -7,6 +7,7 @@ export const userinfo = () => {
             mode: 'no-cors',
             headers: {
                 "Content-Type": "application/json",
+                "token": `${localStorage.token}`,
             },
             credentials: 'include'
         }
