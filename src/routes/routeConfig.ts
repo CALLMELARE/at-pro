@@ -16,6 +16,7 @@ import WeekReport from '../components/Work/WeekReport/WeekReport';
 import Discuss from '../components/Work/Discuss/Discuss';
 import WeekReportList from '../components/Work/WeekReport/WeekReportList';
 import WorkSpace from '../components/Work/Discuss/WorkSpace';
+import GroupAttending from '../components/Work/Meeting/GroupAttending';
 
 export default [{
     label: "首页",
@@ -81,6 +82,10 @@ export default [{
     label: "未完成会议",
     path: "/Work/Meeting",
     component: Meeting
+}, {
+    label: "组员出勤情况",
+    path: "/Work/GroupAttending",
+    component: GroupAttending
 }, {
     label: "讨论区",
     path: "/Work/Discuss",

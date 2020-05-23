@@ -70,7 +70,8 @@ class Login extends Component<any, any> {
                 if (data.message === "登录成功") {
                     sessionStorage.setItem("isLogin", "1");
                     sessionStorage.setItem("username", loginData.name);
-                    localStorage.setItem("token",loginData.token)
+                    localStorage.setItem("token", loginData.token);
+                    sessionStorage.setItem("auth", loginData.auth)
                     this.setState({ loading: false, })
                     if (type) {
                         sessionStorage.setItem("admin-panel", "true");

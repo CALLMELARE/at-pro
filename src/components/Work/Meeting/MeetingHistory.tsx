@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Input } from 'antd';
+import { Link } from 'react-router-dom';
+const auth = sessionStorage.getItem("auth");
 const { Search } = Input;
 
 
@@ -66,7 +68,13 @@ class MeetingHistory extends Component<Props, State> {
                     <p className="hismetting-list"><span className="hismetting-list-title">发起人：</span>张某某（3017005243）</p>
                     <p className="hismetting-list"><span className="hismetting-list-title">主持人：</span>张某某（3017005243）</p>
                     <p className="hismetting-list"><span className="hismetting-list-title">主要内容：</span>讨论有关工作室网址迁移的通知及注意事项</p>
-                    <p className="hismetting-list"><span className="hismetting-list-title">出勤比例：</span>39 / 50</p>
+                    <p className="hismetting-list"><span className="hismetting-list-title">出勤比例：</span>39 / 50
+                    {auth === "2" ?
+                            <Link to={`/Work/GroupAttending?id=${0}`} className="mygroup">
+                                我组成员情况
+                            </Link>
+                            : null}
+                    </p>
                     <p className="hismetting-list"><span className="hismetting-list-title">您的状态：</span>{this.renderStatus(this.state.status)}</p>
                 </div>
             </div>

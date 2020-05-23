@@ -9,6 +9,7 @@ import activityFinishedData from '../../test/activityFinished';
 
 const actData = activityData.data;
 const finData = activityFinishedData.data;
+const auth = sessionStorage.getItem("auth")
 
 const { TabPane } = Tabs;
 
@@ -105,6 +106,11 @@ class Message extends Component<any, any> {
                         <Donut />
                     </TabPane>
                 </Tabs>
+                {auth === "2" ?
+                    <Link to={`/Work/NewMeeting`} className="work-newmeeting card-shadow">
+                        发起会议
+                    </Link>
+                    : null}
             </div>
         )
     }
