@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Badge, Col, Row, Progress } from 'antd';
 import discussData from '../../../test/discuss';
 import maskImg from '../../../assets/PROJECT-bg.png';
+import { Link } from 'react-router-dom';
 
 export interface Props {
 
@@ -11,7 +12,7 @@ export interface State {
 
 }
 
-const bgStyle={
+const bgStyle = {
     backgroundImage: `url(${maskImg})`,
     backgroundSize: "70%",
     backgroundRepeat: "no-repeat",
@@ -56,23 +57,25 @@ class Discuss extends React.Component<Props, State> {
         data.map((item) => {
             list.push(
                 <Col span={12} key={0}>
-                    <div className="discuss-item card-shadow">
-                        <div>
-                            <span className="discuss-item-title">{this.statusPoint(item.status, false)}{item.title}</span>
-                            <div className="discuss-item-content">
-                                <div>
-                                    {item.status === 4 ? null : <span className="discuss-item-text1">团队：{item.team}</span>}
-                                    <span className="discuss-item-text1">组建人：{item.host}</span>
-                                </div>
-                                <div>
-                                    {item.status === 4 ? <span className="discuss-item-text2">项目开始时间：{item.startTime}</span> : null}
-                                    {item.status === 4 ? null : <span className="discuss-item-text2">最近编辑者：{item.lastEditor}</span>}
-                                    {item.status === 4 ? null : <span className="discuss-item-text2">最近编辑于：{item.lastEditTime}</span>}
+                    <Link to={`/Work/WorkSpace?id=${0}`}>
+                        <div className="discuss-item card-shadow">
+                            <div>
+                                <span className="discuss-item-title">{this.statusPoint(item.status, false)}{item.title}</span>
+                                <div className="discuss-item-content">
+                                    <div>
+                                        {item.status === 4 ? null : <span className="discuss-item-text1">团队：{item.team}</span>}
+                                        <span className="discuss-item-text1">组建人：{item.host}</span>
+                                    </div>
+                                    <div>
+                                        {item.status === 4 ? <span className="discuss-item-text2">项目开始时间：{item.startTime}</span> : null}
+                                        {item.status === 4 ? null : <span className="discuss-item-text2">最近编辑者：{item.lastEditor}</span>}
+                                        {item.status === 4 ? null : <span className="discuss-item-text2">最近编辑于：{item.lastEditTime}</span>}
+                                    </div>
                                 </div>
                             </div>
+                            <Progress type="dashboard" percent={this.calcProgress(item.startTime, item.endTime)} />
                         </div>
-                        <Progress type="dashboard" percent={this.calcProgress(item.startTime, item.endTime)} />
-                    </div>
+                    </Link>
                 </Col>
             )
         })

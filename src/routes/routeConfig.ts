@@ -15,6 +15,7 @@ import Meeting from '../components/Work/Meeting/Meeting';
 import WeekReport from '../components/Work/WeekReport/WeekReport';
 import Discuss from '../components/Work/Discuss/Discuss';
 import WeekReportList from '../components/Work/WeekReport/WeekReportList';
+import WorkSpace from '../components/Work/Discuss/WorkSpace';
 
 export default [{
     label: "首页",
@@ -84,5 +85,9 @@ export default [{
     label: "讨论区",
     path: "/Work/Discuss",
     component: Discuss
+},{
+    label: "讨论面板",
+    path: "/Work/WorkSpace",
+    component: WorkSpace
 },
 ]
