@@ -404,7 +404,8 @@
             text-emphasis: none;
             color: #ffffff;
         }
-        .mygroup:hover{
+
+        .mygroup:hover {
             background-color: #89C997;
         }
     }
@@ -647,4 +648,22 @@
         }
     }
 
+}
+
+.newmeeting-form {
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+
+    .random-key {
+        margin-top: 0.5rem;
+    }
+}
+
+.meeting-record {
+    margin: 0 0.5rem;
+    margin-bottom: 2rem;
 }

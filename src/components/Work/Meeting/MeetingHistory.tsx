@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Input } from 'antd';
+import { Input, Form } from 'antd';
 import { Link } from 'react-router-dom';
+import MeetingRecord from './MeetingRecord';
 const auth = sessionStorage.getItem("auth");
 const { Search } = Input;
 
@@ -63,7 +64,8 @@ class MeetingHistory extends Component<Props, State> {
                             onSearch={(value: any) => console.log(value)}
                         />
                     </div>
-                    <p className="hismetting-list"><span className="hismetting-list-title">会议时间：</span>2020年05月02号</p>
+                    <p className="hismetting-list"><span className="hismetting-list-title">会议名称：</span>XXX组2020年第N周组会</p>
+                    <p className="hismetting-list"><span className="hismetting-list-title">会议时间：</span>2020.05.09 18:30——2020.05.09 19:00</p>
                     <p className="hismetting-list"><span className="hismetting-list-title">会议地点：</span>天外天工作室（北洋园校区）</p>
                     <p className="hismetting-list"><span className="hismetting-list-title">发起人：</span>张某某（3017005243）</p>
                     <p className="hismetting-list"><span className="hismetting-list-title">主持人：</span>张某某（3017005243）</p>
@@ -77,6 +79,7 @@ class MeetingHistory extends Component<Props, State> {
                     </p>
                     <p className="hismetting-list"><span className="hismetting-list-title">您的状态：</span>{this.renderStatus(this.state.status)}</p>
                 </div>
+                <MeetingRecord />
             </div>
         );
     }
