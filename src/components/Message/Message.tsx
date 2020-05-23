@@ -15,7 +15,7 @@ class Message extends Component {
                     <MessageBox title="成员信息" />
                 </div>
                 <div className="mes-card">
-
+                    <MessageBox title="系统消息" />
                 </div>
             </div>
         )
