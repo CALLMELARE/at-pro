@@ -9,7 +9,8 @@ import {
     MenuFoldOutlined,
     LogoutOutlined,
     BellOutlined,
-    HomeOutlined
+    HomeOutlined,
+    UserOutlined
 } from '@ant-design/icons';
 
 export interface Props {
@@ -68,6 +69,9 @@ class HeaderComponent extends Component<Props, State>{
                     : null}
                 <div style={{ marginRight: "1rem" }}>
                     <a className="noti-button" onClick={this.showDrawer}><BellOutlined /></a>
+                    <Link className="logout" to="/Profile">
+                        <UserOutlined />
+                    </Link>
                     <Link className="logout" to="/logout">
                         <LogoutOutlined />
                     </Link>
