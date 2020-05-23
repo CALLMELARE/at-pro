@@ -7,7 +7,8 @@ import WeekReportEdit from '../components/Work/WeekReport/WeekReportEdit';
 import MdGuide from '../components/MdUnit/MdGuide';
 import AdminAuthorityManage from '../components/Admin/AuthorityManage';
 import AdminUserManage from '../components/Admin/UserManage';
-import AdminSystemNotice from '../components/Admin/SystemNotice'
+import AdminSystemNotice from '../components/Admin/SystemNotice';
+import AdminFunctionManage from '../components/Admin/FunctionManage';
 import Sign from '../components/Work/Meeting/Sign';
 import MeetingHistory from '../components/Work/Meeting/MeetingHistory';
 import Leave from '../components/Work/Meeting/Leave';
@@ -19,6 +20,7 @@ import WorkSpace from '../components/Work/Discuss/WorkSpace';
 import GroupAttending from '../components/Work/Meeting/GroupAttending';
 import NewMeeting from '../components/Work/Meeting/NewMeeting';
 import MessageDetail from '../components/Message/MessageDetail';
+
 
 export default [{
     label: "首页",
@@ -61,6 +63,10 @@ export default [{
     path: '/Work/MdGuide',
     component: MdGuide,
 }, {
+    label: "后台功能管理",
+    path: '/Admin/FunctionManage',
+    component: AdminFunctionManage,
+},{
     label: "后台权限管理",
     path: '/Admin/AuthorityManage',
     component: AdminAuthorityManage,

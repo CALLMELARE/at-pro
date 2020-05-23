@@ -6,7 +6,8 @@ import {
     NotificationOutlined,
     UserSwitchOutlined,
     CalendarOutlined,
-    UserOutlined
+    UserOutlined,
+    AppstoreAddOutlined
 } from '@ant-design/icons';
 import '../../styles/dashboard.scss';
 import { org } from '../../settings/settings'
@@ -99,15 +100,23 @@ class Dashboard extends Component<any, any> {
                 {panelCtrl === "true" ?
                     <div className="admin-home">
                         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                            <Col span={8}>
-                                <Link to="/Admin/UserManage">
+                        <Col span={6}>
+                                <Link to="/Admin/FunctionManage">
                                     <div className="admin-home-card card-shadow">
-                                        <UserSwitchOutlined style={{ fontSize: "5rem" }} />
-                                        <span>用户管理</span>
+                                        <AppstoreAddOutlined style={{ fontSize: "5rem" }} />
+                                        <span>功能管理</span>
                                     </div>
                                 </Link>
                             </Col>
-                            <Col span={8}>
+                            <Col span={6}>
+                                <Link to="/Admin/UserManage">
+                                    <div className="admin-home-card card-shadow">
+                                        <UserSwitchOutlined style={{ fontSize: "5rem" }} />
+                                        <span>成员管理</span>
+                                    </div>
+                                </Link>
+                            </Col>
+                            <Col span={6}>
                                 <Link to="/Admin/AuthorityManage">
                                     <div className="admin-home-card card-shadow">
                                         <PartitionOutlined style={{ fontSize: "5rem" }} />
@@ -115,7 +124,7 @@ class Dashboard extends Component<any, any> {
                                     </div>
                                 </Link>
                             </Col>
-                            <Col span={8}>
+                            <Col span={6}>
                                 <Link to="/Admin/SystemNotice">
                                     <div className="admin-home-card card-shadow">
                                         <NotificationOutlined style={{ fontSize: "5rem" }} />

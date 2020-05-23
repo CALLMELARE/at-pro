@@ -63,20 +63,26 @@ class HeaderComponent extends Component<Props, State>{
                     <p>
                         <div className="logo" >
                             <img src={twtlogo} height="40" width="40" />
-                            {this.props.collapsed ? null : siteTitle()}
+                            {siteTitle()}
                         </div>
                     </p>
                     : null}
-                <div style={{ marginRight: "1rem" }}>
-                    <a className="noti-button" onClick={this.showDrawer}><BellOutlined /></a>
-                    <Link className="logout" to="/Profile">
-                        <UserOutlined />
-                    </Link>
+                {panelCtrl === "true" ? <div style={{ marginRight: "1rem" }}>
                     <Link className="logout" to="/logout">
                         <LogoutOutlined />
                     </Link>
-                    <Notification visible={this.state.visible} onClose={this.onClose} />
                 </div>
+                    :
+                    <div style={{ marginRight: "1rem" }}>
+                        <a className="noti-button" onClick={this.showDrawer}><BellOutlined /></a>
+                        <Link className="logout" to="/Profile">
+                            <UserOutlined />
+                        </Link>
+                        <Link className="logout" to="/logout">
+                            <LogoutOutlined />
+                        </Link>
+                        <Notification visible={this.state.visible} onClose={this.onClose} />
+                    </div>}
             </div>
         )
     }
