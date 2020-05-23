@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Radio, Button, Row, Col, Checkbox, Form } from "antd";
+import { Radio, Button, Row, Col, Checkbox, Form, message } from "antd";
 import msg from '../../test/message';
+import messages from "../../test/message";
+import { Link } from "react-router-dom";
 
 interface item {
     from: string,
@@ -50,17 +52,19 @@ class MessageBox extends Component<Props, State> {
 
     renderMesItem = (status: string, data: item) => {
         return (
-            <Row className="mesbox-item">
-                <Col span={1}>{status === "read" ? null : <div className="pot"></div>}</Col>
-                <Col span={this.state.onselect ? 16 : 17}><span className="mesbox-item-from">{data.from}:</span>{data.message.substring(0, 10)}</Col>
-                <Col span={4}>{data.updated_at}</Col>
-                <Col span={2}>{"工作室"}</Col>
-                {this.state.onselect ?
-                    <Col span={1}>
-                        <Checkbox value={data.id}></Checkbox>
-                    </Col>
-                    : null}
-            </Row>
+            <Link to={`/Message/Detail?id=${data.id}`}>
+                <Row className="mesbox-item">
+                    <Col span={1}>{status === "read" ? null : <div className="pot"></div>}</Col>
+                    <Col span={this.state.onselect ? 16 : 17}><span className="mesbox-item-from">{data.from}:</span>{data.message.substring(0, 10)}</Col>
+                    <Col span={4}>{data.updated_at}</Col>
+                    <Col span={2}>{"工作室"}</Col>
+                    {this.state.onselect ?
+                        <Col span={1}>
+                            <Checkbox value={data.id}></Checkbox>
+                        </Col>
+                        : null}
+                </Row>
+            </Link>
         )
     }
 
@@ -77,6 +81,7 @@ class MessageBox extends Component<Props, State> {
 
     onFinish = (values: any) => {
         console.log('Received values of form: ', values);
+        message.success('删除成功');
     }
 
     render() {
@@ -93,7 +98,7 @@ class MessageBox extends Component<Props, State> {
                                 <Radio.Button value="notread">未读</Radio.Button>
                                 <Radio.Button value="read">已读</Radio.Button>
                             </Radio.Group>
-                            <Button className="mesbox-header-filterr" onClick={this.handleClickSelect.bind(this)}>{this.state.onselect?"退出多选":"多选"}</Button>
+                            <Button className="mesbox-header-filterr" onClick={this.handleClickSelect.bind(this)}>{this.state.onselect ? "退出多选" : "多选"}</Button>
                             {this.state.onselect ? <Button htmlType="submit" danger>删除</Button> : null}
                         </span>
                     </div>

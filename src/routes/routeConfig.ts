@@ -18,6 +18,7 @@ import WeekReportList from '../components/Work/WeekReport/WeekReportList';
 import WorkSpace from '../components/Work/Discuss/WorkSpace';
 import GroupAttending from '../components/Work/Meeting/GroupAttending';
 import NewMeeting from '../components/Work/Meeting/NewMeeting';
+import MessageDetail from '../components/Message/MessageDetail';
 
 export default [{
     label: "首页",
@@ -31,6 +32,10 @@ export default [{
     label: "消息",
     path: '/Message',
     component: Message
+},{
+    label: "消息详情",
+    path: '/Message/Detail',
+    component: MessageDetail
 }, {
     label: "工作",
     path: '/Work',
