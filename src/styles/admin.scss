@@ -1,0 +1,58 @@
+.admin-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem;
+    cursor: default;
+}
+
+.system-notice {
+    .his-post {
+        background-color: #ffffff;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem;
+
+        .his-post-titles {
+            margin: 0.5rem 0;
+
+            .his-post-title {
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+        }
+
+        .his-post-list {
+            .his-post-cotents {
+                .his-post-cotent {
+                    margin: 0.5rem 0;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+
+            .his-post-cotents:hover {
+                border-radius: 5px;
+                border: 1px solid #d9d9d9;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .new-post {
+        background-color: #ffffff;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem;
+        .switch-target{
+            text-align: center;
+        }
+        .post{
+            text-align: center;
+        }
+    }
+}
