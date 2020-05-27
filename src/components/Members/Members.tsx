@@ -14,6 +14,7 @@ interface Member {
     type: string,
     memId: number,
     name: string,
+    campus: number
 }
 
 class Members extends React.PureComponent {

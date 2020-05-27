@@ -2,34 +2,42 @@ export default {
     "data": [{
         "type": "组长",
         "memId": 2,
-        "name": "路人甲"
+        "name": "路人甲",
+        "campus": 1,
     }, {
         "type": "组员",
         "memId": 3,
-        "name": "路人乙"
+        "name": "路人乙",
+        "campus": 0,
     }, {
         "type": "组员",
         "memId": 4,
-        "name": "路人丙"
+        "name": "路人丙",
+        "campus": 1,
     }, {
         "type": "组员",
         "memId": 5,
-        "name": "路人丁"
+        "name": "路人丁",
+        "campus": 0,
     }, {
         "type": "组员",
         "memId": 6,
-        "name": "路人戊"
+        "name": "路人戊",
+        "campus": 1,
     }, {
         "type": "组员",
         "memId": 7,
-        "name": "路人己"
+        "name": "路人己",
+        "campus": 0,
     }, {
         "type": "组员",
         "memId": 8,
-        "name": "路人庚"
+        "name": "路人庚",
+        "campus": 0,
     }, {
         "type": "组员",
         "memId": 9,
-        "name": "路人辛"
+        "name": "路人辛",
+        "campus": 1,
     }]
 }
