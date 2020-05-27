@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Panel from "../public/AdminPanel"
+import Panel from "../../public/AdminPanel"
 
 class AuthorityManage extends Component<any, any>{
     render() {

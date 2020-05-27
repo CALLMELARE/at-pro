@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Panel from '../public/AdminPanel';
-import '../../styles/admin.scss';
+import Panel from '../../public/AdminPanel';
+import '../../../styles/admin.scss';
 import { Row, Col, Form, Input, Radio, Button } from "antd";
-import sysnotice from '../../test/sysnotice';
+import sysnotice from '../../../test/sysnotice';
+import { Link } from "react-router-dom";
 const { TextArea } = Input;
 
 export interface Props {
@@ -24,13 +25,15 @@ class SystemNotice extends Component<Props, State>{
         let list: JSX.Element[] = [];
         sysnotice.data.map((item) => {
             list.push(
-                <Row className="his-post-cotents" key={item.id}>
-                    <Col className="his-post-cotent" span={2}>{item.id}</Col>
-                    <Col className="his-post-cotent" span={6}>{item.post_time}</Col>
-                    <Col className="his-post-cotent" span={4}>{item.auther}</Col>
-                    <Col className="his-post-cotent" span={6}>{item.target}</Col>
-                    <Col className="his-post-cotent" span={6}>{item.describe}</Col>
-                </Row>
+                <Link to={`/Admin/SystemNoticeHistory?id=${item.id}`}>
+                    <Row className="his-post-cotents" key={item.id}>
+                        <Col className="his-post-cotent" span={2}>{item.id}</Col>
+                        <Col className="his-post-cotent" span={6}>{item.post_time}</Col>
+                        <Col className="his-post-cotent" span={4}>{item.auther}</Col>
+                        <Col className="his-post-cotent" span={6}>{item.target}</Col>
+                        <Col className="his-post-cotent" span={6}>{item.describe}</Col>
+                    </Row>
+                </Link>
             )
         })
         return list

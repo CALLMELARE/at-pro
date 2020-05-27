@@ -5,10 +5,10 @@ import Work from '../components/Work/Work';
 import Members from '../components/Members/Members';
 import WeekReportEdit from '../components/Work/WeekReport/WeekReportEdit';
 import MdGuide from '../components/MdUnit/MdGuide';
-import AdminAuthorityManage from '../components/Admin/AuthorityManage';
-import AdminUserManage from '../components/Admin/UserManage';
-import AdminSystemNotice from '../components/Admin/SystemNotice';
-import AdminFunctionManage from '../components/Admin/FunctionManage';
+import AdminAuthorityManage from '../components/Admin/AuthManage/AuthorityManage';
+import AdminUserManage from '../components/Admin/UseManage/UserManage';
+import AdminSystemNotice from '../components/Admin/SysNotice/SystemNotice';
+import AdminFunctionManage from '../components/Admin/FuncManage/FunctionManage';
 import Sign from '../components/Work/Meeting/Sign';
 import MeetingHistory from '../components/Work/Meeting/MeetingHistory';
 import Leave from '../components/Work/Meeting/Leave';
@@ -20,6 +20,7 @@ import WorkSpace from '../components/Work/Discuss/WorkSpace';
 import GroupAttending from '../components/Work/Meeting/GroupAttending';
 import NewMeeting from '../components/Work/Meeting/NewMeeting';
 import MessageDetail from '../components/Message/MessageDetail';
+import SystemNoticeHistory from '../components/Admin/SysNotice/SystemNoticeHistory';
 
 
 export default [{
@@ -74,6 +75,10 @@ export default [{
     label: "后台系统公告",
     path: '/Admin/SystemNotice',
     component: AdminSystemNotice,
+},  {
+    label: "后台系统历史公告",
+    path: '/Admin/SystemNoticeHistory',
+    component: SystemNoticeHistory,
 }, {
     label: "后台用户管理",
     path: '/Admin/UserManage',
