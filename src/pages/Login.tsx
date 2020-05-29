@@ -32,7 +32,7 @@ class Login extends Component<any, any> {
     debug() {
         Modal.success({
             title: <p><img src={twtlogo} height="30" width="30" />At</p>,
-            content: '以开发者身份登录成功',
+            content: '开发者模式已启用',
             okText: "Ok",
         });
     }
@@ -52,12 +52,12 @@ class Login extends Component<any, any> {
             sessionStorage.setItem("isLogin", "1");
             sessionStorage.setItem("username", "开发者");
             this.setState({ loading: false, })
-            if (type) {
+            if (values.username === "admin" && values.password === "123456") {
                 sessionStorage.setItem("admin-panel", "true");
-                window.location.href = "/";
-            } else {
+                window.location.href = "/at-pro";
+            } else if(values.username === "admin" && values.password === "654321") {
                 sessionStorage.setItem("admin-panel", "false");
-                window.location.href = "/";
+                window.location.href = "/at-pro";
             }
         }
         this.setState({ loading: true, });
@@ -75,10 +75,10 @@ class Login extends Component<any, any> {
                     this.setState({ loading: false, })
                     if (type) {
                         sessionStorage.setItem("admin-panel", "true");
-                        window.location.href = "/";
+                        window.location.href = "/at-pro";
                     } else {
                         sessionStorage.setItem("admin-panel", "false");
-                        window.location.href = "/";
+                        window.location.href = "/at-pro";
                     }
                 } else {
                     this.error()

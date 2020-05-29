@@ -22,7 +22,7 @@ class Logout extends Component {
                 icon={<CheckCircleOutlined />}
                 title="你已成功登出"
                 status={"success"}
-                extra={<Button type="primary" href="/">返回</Button>}
+                extra={<Button type="primary" href="/at-pro">返回</Button>}
             />
         )
     }
