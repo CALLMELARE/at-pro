@@ -1,6 +1,7 @@
 {
   "name": "at-pro",
   "version": "0.1.0",
+  "homepage": "https://callmelare.github.io/at-pro",
   "private": true,
   "dependencies": {
     "@antv/data-set": "^0.11.4",
@@ -49,7 +50,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -67,6 +70,7 @@
     ]
   },
   "devDependencies": {
-    "@types/markdown-it": "^10.0.0"
+    "@types/markdown-it": "^10.0.0",
+    "gh-pages": "^2.2.0"
   }
 }
