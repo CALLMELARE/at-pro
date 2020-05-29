@@ -23,7 +23,7 @@ class SiderCustom extends Component<any, any> {
 
     menuRender() {
         let pathname: string = window.location.pathname;
-        switch (pathname.split("/")[1]) {
+        switch (pathname.split("/")[2]) {
             case "":
                 return ['1']
                 break;

@@ -10,7 +10,7 @@ import zhCN from 'antd/es/locale/zh_CN';
 // import { composeWithDevTools } from 'redux-devtools-extension';
 
 const Root = () => (
-  <Router>
+  <Router basename="/at-pro">
     <ConfigProvider locale={zhCN}>
       <RouteConfig />
     </ConfigProvider>
