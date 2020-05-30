@@ -22,6 +22,7 @@ import NewMeeting from '../components/Work/Meeting/NewMeeting';
 import MessageDetail from '../components/Message/MessageDetail';
 import SystemNoticeHistory from '../components/Admin/SysNotice/SystemNoticeHistory';
 import FuncMeeting from '../components/Admin/FuncManage/Meeting';
+import FuncMeetingDetail from '../components/Admin/FuncManage/MeetingDetail';
 import FuncDiscuss from '../components/Admin/FuncManage/Discuss';
 import FuncAccount from '../components/Admin/FuncManage/Account';
 
@@ -73,6 +74,10 @@ export default [{
     label: "后台功能管理(会议管理)",
     path: '/Admin/FunctionManage/Meeting',
     component: FuncMeeting,
+}, {
+    label: "后台功能管理详情(会议管理)",
+    path: '/Admin/FunctionManage/MeetingDetail',
+    component: FuncMeetingDetail,
 }, {
     label: "后台功能管理(讨论区管理)",
     path: '/Admin/FunctionManage/Discuss',
