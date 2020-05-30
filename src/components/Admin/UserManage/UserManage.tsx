@@ -1,21 +1,14 @@
-import React from 'react';
+import React, { Component } from "react";
 import Panel from '../../public/AdminPanel';
-import Header from './FunctionHeader';
-import { Tabs, Tooltip, Row, Col } from 'antd';
+import { Tabs, Row, Col, message } from "antd";
 import memsData from '../../../test/members';
+import { Link } from "react-router-dom";
 import {
-    SettingOutlined
+    CloseCircleOutlined,
+    PlusOutlined,
+    DeleteOutlined
 } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
-
 const { TabPane } = Tabs;
-
-interface Member {
-    type: string,
-    memId: number,
-    name: string,
-    campus: number
-}
 
 export interface Props {
 
@@ -25,12 +18,21 @@ export interface State {
 
 }
 
-class Account extends React.Component<Props, State> {
+interface Member {
+    type: string,
+    memId: number,
+    name: string,
+    campus: number
+}
+
+class UserManage extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
-        this.state = {
+        this.state = {};
+    }
 
-        };
+    handleDelete = (name: string) => {
+        message.error(`用户 ${name} 删除失败，请检查网络`);
     }
 
     campusSwitch = (campus: number) => {
@@ -53,9 +55,7 @@ class Account extends React.Component<Props, State> {
                             <Col span={4}>{_item.name}</Col>
                             <Col span={16}>{this.campusSwitch(_item.campus) + "校区"}</Col>
                             <Col span={4}>
-                                <Link to={`/Admin/FunctionManage/AccountDetail?id=${_item.memId}`}>
-                                    <SettingOutlined />
-                                </Link>
+                                <CloseCircleOutlined onClick={this.handleDelete.bind(this, _item.name)} className="del-btn" />
                             </Col>
                         </Row>
                     )
@@ -65,9 +65,7 @@ class Account extends React.Component<Props, State> {
                             <Col span={4}>{_item.name}</Col>
                             <Col span={16}>{this.campusSwitch(_item.campus) + "校区"}</Col>
                             <Col span={4}>
-                                <Link to={`/Admin/FunctionManage/AccountDetail?id=${_item.memId}`}>
-                                    <SettingOutlined />
-                                </Link>
+                                <CloseCircleOutlined onClick={this.handleDelete.bind(this, _item.name)} className="del-btn" />
                             </Col>
                         </Row>
                     )
@@ -92,8 +90,15 @@ class Account extends React.Component<Props, State> {
         return (
             <div>
                 <Panel />
-                <Header />
-                <div className="admin-title">账户管理</div>
+                <div className="admin-title">成员管理</div>
+                <div className="usermanage-btns">
+                    <Link className="add card-shadow" to="/Admin/UserManage/AddUser">
+                        <div><PlusOutlined /> 添加成员</div>
+                    </Link>
+                    <Link className="delete card-shadow" to="/Admin/UserManage/DeletedUser">
+                        <div><DeleteOutlined /> OOPS！</div>
+                    </Link>
+                </div>
                 <Tabs defaultActiveKey="1" className="mem-container">
                     <TabPane tab="产品组" key="1" className="mem-tabs">
                         {this.renderMems()}
@@ -119,4 +124,4 @@ class Account extends React.Component<Props, State> {
     }
 }
 
-export default Account;
+export default UserManage;

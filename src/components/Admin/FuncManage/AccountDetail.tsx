@@ -10,7 +10,6 @@ import {
 import { Row, Col, Input, Form, Button, message, Select } from 'antd';
 const { Option } = Select;
 
-
 export interface Props {
 
 }

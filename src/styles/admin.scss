@@ -209,10 +209,73 @@
                 border-radius: 5px;
                 cursor: pointer;
             }
-            .reset:hover{
+
+            .reset:hover {
                 color: #d9d9d9;
             }
         }
     }
+}
 
+.usermanage-btns {
+    text-emphasis: none;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+
+    .add {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        background-color: #45484E;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    .delete {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        background-color: #ffffff;
+        border-radius: 5px;
+        color: #45484E;
+    }
+}
+
+.del-btn {
+    color: #d9d9d9;
+    cursor: pointer;
+}
+
+.del-btn:hover {
+    color: #EC6941;
+}
+
+.usermanage-add-card {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+
+    .sub-title {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .usermanage-add-items {
+        padding: 1.5rem;
+
+        .usermanage-add-item {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 0.5rem;
+
+            .ant-form-item {
+                margin: 0;
+            }
+        }
+    }
 }

@@ -6,7 +6,7 @@ import Members from '../components/Members/Members';
 import WeekReportEdit from '../components/Work/WeekReport/WeekReportEdit';
 import MdGuide from '../components/MdUnit/MdGuide';
 import AdminAuthorityManage from '../components/Admin/AuthManage/AuthorityManage';
-import AdminUserManage from '../components/Admin/UseManage/UserManage';
+import AdminUserManage from '../components/Admin/UserManage/UserManage';
 import AdminSystemNotice from '../components/Admin/SysNotice/SystemNotice';
 import AdminFunctionManage from '../components/Admin/FuncManage/FunctionManage';
 import Sign from '../components/Work/Meeting/Sign';
@@ -27,6 +27,8 @@ import FuncDiscuss from '../components/Admin/FuncManage/Discuss';
 import FuncDiscussDetail from '../components/Admin/FuncManage/DiscussDetail';
 import FuncAccount from '../components/Admin/FuncManage/Account';
 import FuncAccountDetail from '../components/Admin/FuncManage/AccountDetail';
+import AddUser from '../components/Admin/UserManage/AddUser';
+import DeletedUser from '../components/Admin/UserManage/DeletedUser';
 
 export default [{
     label: "首页",
@@ -112,6 +114,14 @@ export default [{
     label: "后台用户管理",
     path: '/Admin/UserManage',
     component: AdminUserManage,
+}, {
+    label: "后台新增用户",
+    path: '/Admin/UserManage/AddUser',
+    component: AddUser,
+}, {
+    label: "后台删除用户",
+    path: '/Admin/UserManage/DeletedUser',
+    component: DeletedUser,
 }, {
     label: "签到",
     path: "/Work/Sign",
