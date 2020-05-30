@@ -29,14 +29,6 @@ class Login extends Component<any, any> {
         };
     }
 
-    debug() {
-        Modal.success({
-            title: <p><img src={twtlogo} height="30" width="30" />At</p>,
-            content: '开发者模式已启用',
-            okText: "Ok",
-        });
-    }
-
     error() {
         Modal.error({
             title: <p><img src={twtlogo} height="30" width="30" />At</p>,
@@ -48,16 +40,22 @@ class Login extends Component<any, any> {
     onFinish = (values: any) => {
         // console.log('Received values of form: ', values);
         if (loginBypass === true) {
-            this.debug()
             sessionStorage.setItem("isLogin", "1");
             sessionStorage.setItem("username", "开发者");
             this.setState({ loading: false, })
-            if (values.username === "admin" && values.password === "123456") {
+            if (values.username === "admin" && values.password === "twtstudio") {
                 sessionStorage.setItem("admin-panel", "true");
                 window.location.href = "/at-pro";
-            } else if(values.username === "admin" && values.password === "654321") {
+            } else if (values.username === "user" && values.password === "twtstudio") {
                 sessionStorage.setItem("admin-panel", "false");
+                sessionStorage.setItem("auth", "1")
                 window.location.href = "/at-pro";
+            } else if (values.username === "leader" && values.password === "twtstudio") {
+                sessionStorage.setItem("admin-panel", "false");
+                sessionStorage.setItem("auth", "2")
+                window.location.href = "/at-pro";
+            } else {
+                this.error()
             }
         }
         this.setState({ loading: true, });
@@ -87,11 +85,13 @@ class Login extends Component<any, any> {
     };
 
     render() {
+
         return (
             <Layout className="App">
                 <Content className="login-page">
                     <Card className="login-card">
                         <h2>登录</h2>
+                        {loginBypass ? <div style={{ textAlign: "center" }}>开发者模式已启用</div> : null}
                         <Divider dashed className="divider-dashed" />
                         <Form
                             name="normal_login"

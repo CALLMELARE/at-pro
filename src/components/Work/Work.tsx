@@ -115,14 +115,15 @@ class Message extends Component<any, any> {
                         </div>
                         <p className="no-more">没有更多了鸭 _(:з」∠)_</p>
                         <p className="work-title">参与程度</p>
-                        <Donut data={donutData}/>
+                        <Donut data={donutData} />
                     </TabPane>
                 </Tabs>
                 {auth === "2" ?
                     <Link to={`/Work/NewMeeting`} className="work-newmeeting card-shadow">
                         发起会议
                     </Link>
-                    : null}
+                    : null
+                }
             </div>
         )
     }

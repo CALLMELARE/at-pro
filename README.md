@@ -50,6 +50,18 @@ $ gh-pages -d build
 }
 ```
 
+## 测试账号/Test Account
+
+- **组员**
+  - 用户名：user
+  - 密码：twtstudio
+- **组长**
+  - 用户名：leader
+  - 密码：twtstudio
+- **管理员**
+  - 用户名：admin
+  - 密码：twtstudio
+
 ## 依赖/Modules
 
 |       类型        |            名称            |  版本   |
