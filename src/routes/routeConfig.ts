@@ -3,6 +3,7 @@ import Profile from '../components/Profile/Profile';
 import Message from '../components/Message/Message';
 import Work from '../components/Work/Work';
 import Members from '../components/Members/Members';
+import MemberDetail from '../components/Members/MemberDetail';
 import WeekReportEdit from '../components/Work/WeekReport/WeekReportEdit';
 import MdGuide from '../components/MdUnit/MdGuide';
 import AdminAuthorityManage from '../components/Admin/AuthManage/AuthorityManage';
@@ -55,6 +56,10 @@ export default [{
     path: '/Members',
     component: Members,
 }, {
+    label: "成员信息",
+    path: '/Members/Detail',
+    component: MemberDetail,
+},  {
     label: "周报",
     path: '/Work/Report',
     component: WeekReport,

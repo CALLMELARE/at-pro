@@ -50,12 +50,64 @@
                     .mem-user-icon {
                         margin: 0 0.7rem;
                         cursor: pointer;
+
+                        a {
+                            text-decoration: none;
+                            color: inherit;
+                        }
                     }
 
                     .mem-user-icon:hover {
                         box-shadow: 0 0 20px #d9d9d9;
                     }
                 }
+            }
+        }
+    }
+}
+
+.mem-detail {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    margin-top: 5rem;
+
+    .mem-detail-icon {
+        position: absolute;
+        margin-left: -75px;
+        left: 50%;
+        top: -60px;
+    }
+
+    .mem-detail-content {
+        margin-top: 4rem;
+
+        .mem-detail-name {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .mem-detail-id {
+            text-align: center;
+        }
+
+        .mem-detail-str {
+            text-align: center;
+            margin: 10vh 0;
+        }
+
+        .mem-detail-contact {
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+
+            span {
+                margin: 0 0.2rem;
             }
         }
     }

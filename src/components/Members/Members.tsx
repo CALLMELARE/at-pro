@@ -7,6 +7,7 @@ import {
 import '../../styles/members.scss';
 import memsData from '../../test/members';
 import SendMessage from '../public/SendMessage';
+import { Link } from 'react-router-dom';
 
 const { TabPane } = Tabs;
 
@@ -31,7 +32,11 @@ class Members extends React.PureComponent {
                             <div>
                                 <SendMessage btncls="mem-mail-icon" content={<MailOutlined />} target={[_item.memId]} />
                                 <Tooltip placement="bottom" title={"个人信息"}>
-                                    <span className="mem-user-icon"><UserOutlined /></span>
+                                    <span className="mem-user-icon">
+                                        <Link to={`/Members/Detail?id=${_item.memId}`}>
+                                            <UserOutlined />
+                                        </Link>
+                                    </span>
                                 </Tooltip>
                             </div>
                         </div>
@@ -43,7 +48,11 @@ class Members extends React.PureComponent {
                             <div>
                                 <SendMessage btncls="mem-mail-icon" content={<MailOutlined />} />
                                 <Tooltip placement="bottom" title={"个人信息"}>
-                                    <span className="mem-user-icon"><UserOutlined /></span>
+                                    <span className="mem-user-icon">
+                                        <Link to={`/Members/Detail?id=${_item.memId}`}>
+                                            <UserOutlined />
+                                        </Link>
+                                    </span>
                                 </Tooltip>
                             </div>
                         </div>
@@ -51,7 +60,7 @@ class Members extends React.PureComponent {
                 }
             }
         }
-        
+
         return (
             <div className="mem-content-by-group">
                 <p className="mem-title">组长</p>
