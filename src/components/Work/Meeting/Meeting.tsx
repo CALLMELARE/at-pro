@@ -20,7 +20,7 @@ class Meeting extends Component<Props, State> {
             <div>
                 <div className="work-title">待办会议</div>
                 <div className="meeting-card card-shadow">
-                    <p className="meeting-card-title"> 关于组建室级足球队的大会</p>
+                    <p className="meeting-card-title">天外天2020破冰大会</p>
                     <p className="meeting-card-time">会议时间：2020-07-08 下午14:20</p>
                     <div className="meeting-card-detail">
                         <p>发起人：于谋华</p>

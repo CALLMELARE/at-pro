@@ -21,6 +21,27 @@ export interface State {
 
 }
 
+const studioAttend = [
+    {
+        item: "出勤",
+        count: 35
+    },
+    {
+        item: "未出勤",
+        count: 5
+    }
+];
+
+const teamAttend = [
+    {
+        item: "出勤",
+        count: 19
+    },
+    {
+        item: "未出勤",
+        count: 3
+    }
+];
 
 const donutData = [
     {
@@ -39,6 +60,14 @@ class Message extends Component<any, any> {
         this.state = {
 
         };
+    }
+
+    calcAll = (data: any) => {
+        let result = 0;
+        data.map((item: any) => {
+            result += item.count
+        })
+        return result
     }
 
     renderAct = () => {
@@ -115,7 +144,25 @@ class Message extends Component<any, any> {
                         </div>
                         <p className="no-more">没有更多了鸭 _(:з」∠)_</p>
                         <p className="work-title">参与程度</p>
-                        <Donut data={donutData} />
+                        <div style={{ display: "flex" }}>
+                            <Donut data={donutData}
+                                style={{ width: "33.333%" }}
+                                title="出勤次数"
+                                calc={"总计" + this.calcAll(donutData) + "次"}
+                            />
+                            <Donut
+                                data={teamAttend}
+                                style={{ width: "33.333%" }}
+                                title="组会出勤"
+                                calc={"出勤率" + (teamAttend[0].count / this.calcAll(teamAttend) * 100).toString().substr(0, 4) + "%"}
+                            />
+                            <Donut
+                                data={studioAttend}
+                                style={{ width: "33.333%" }}
+                                title="工作室大会出勤次数"
+                                calc={"出勤率" + (studioAttend[0].count / this.calcAll(studioAttend) * 100).toString().substr(0, 4) + "%"}
+                            />
+                        </div>
                     </TabPane>
                 </Tabs>
                 {auth === "2" ?

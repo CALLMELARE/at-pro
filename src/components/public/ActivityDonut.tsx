@@ -14,6 +14,9 @@ import DataSet from "@antv/data-set";
 
 interface Props {
     data: { item: string; count: number; }[]
+    style?: React.CSSProperties | undefined,
+    title?: string,
+    calc?: string,
 }
 
 interface State {
@@ -42,16 +45,7 @@ class Donut extends React.Component<Props, State> {
         super(props);
         this.state = {
 
-
         };
-    }
-
-    calcAll = (data: any) => {
-        let result = 0;
-        data.map((item: any) => {
-            result += item.count
-        })
-        return result
     }
 
     render() {
@@ -64,7 +58,7 @@ class Donut extends React.Component<Props, State> {
             as: "percent"
         });
         return (
-            <div>
+            <div style={this.props.style}>
                 <Chart
                     height={250}
                     data={dv}
@@ -84,7 +78,7 @@ class Donut extends React.Component<Props, State> {
                     <Guide>
                         <Html
                             position={["50%", "50%"]}
-                            html={`<div style=&quot;color:#8c8c8c;font-size:1.16em;text-align: center;width: 10em;&quot;>总计：<span style=&quot;color:#262626;font-size:2.5em&quot;>${this.calcAll(data)}</span></div>`}
+                            html={`<div style=&quot;color:#8c8c8c;font-size:1.16em;text-align: center;width: 10em;&quot;><span style=&quot;color:#262626;font-size:2.5em&quot;>${this.props.calc}</span></div>`}
                             alignX="middle"
                             alignY="middle"
                         />
@@ -115,6 +109,7 @@ class Donut extends React.Component<Props, State> {
                             }}
                         />
                     </Geom>
+                    <span className='donut-title'>{this.props.title}</span>
                 </Chart>
             </div>
         );

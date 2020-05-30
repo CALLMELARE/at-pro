@@ -6,6 +6,7 @@ import {
     CloseOutlined
 } from '@ant-design/icons';
 import maskImg from '../../assets/POST-bg.png';
+import member from '../../test/members';
 import '../../styles/message.scss';
 import PictureWall from './PicturesWall';
 
@@ -75,6 +76,17 @@ class SendMessage extends Component<Props, State> {
         </div>
     )
 
+    renderReceiver = () => {
+        let receiveList: JSX.Element[] = [];
+        let data = member.data;
+        data.map((item) => {
+            receiveList.push(
+                <Option value={item.memId}>{item.name}</Option>
+            )
+        })
+        return receiveList
+    }
+
     render() {
         return (
             <span>
@@ -96,9 +108,7 @@ class SendMessage extends Component<Props, State> {
                     <Form>
                         <Form.Item>
                             <Select mode="multiple" placeholder="选择私信接收者" allowClear={true}>
-                                <Option value="red">Red</Option>
-                                <Option value="green">Green</Option>
-                                <Option value="blue">Blue</Option>
+                                {this.renderReceiver()}
                             </Select>
                         </Form.Item>
                         <Form.Item>
