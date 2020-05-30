@@ -12,29 +12,21 @@ import {
 } from "bizcharts";
 import DataSet from "@antv/data-set";
 
+interface Props {
+    data: { item: string; count: number; }[]
+}
+
+interface State {
+
+}
+
 const { Global } = G2; // 获取 Global 全局对象
-Global.animate = false ; // 关闭默认动画
-Global.colors = [ 'red', 'blue', 'yellow' ]; // 更改默认的颜色
+Global.animate = true; // 关闭默认动画
+Global.colors = ['red', 'blue', 'yellow']; // 更改默认的颜色
 
 const { DataView } = DataSet;
 const { Html } = Guide;
-const data = [
-    {
-        item: "工作室大会",
-        count: 40
-    },
-    {
-        item: "组会",
-        count: 21
-    }
-];
-const dv = new DataView();
-dv.source(data).transform({
-    type: "percent",
-    field: "count",
-    dimension: "item",
-    as: "percent"
-});
+
 const cols = {
     percent: {
         formatter: (val: any) => {
@@ -44,7 +36,15 @@ const cols = {
     }
 };
 
-class Donut extends React.Component {
+class Donut extends React.Component<Props, State> {
+
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+
+
+        };
+    }
 
     calcAll = (data: any) => {
         let result = 0;
@@ -55,6 +55,14 @@ class Donut extends React.Component {
     }
 
     render() {
+        const dv = new DataView();
+        let data = this.props.data
+        dv.source(data).transform({
+            type: "percent",
+            field: "count",
+            dimension: "item",
+            as: "percent"
+        });
         return (
             <div>
                 <Chart
@@ -76,7 +84,7 @@ class Donut extends React.Component {
                     <Guide>
                         <Html
                             position={["50%", "50%"]}
-                            html={`<div style=&quot;color:#8c8c8c;font-size:1.16em;text-align: center;width: 10em;&quot;><span style=&quot;color:#262626;font-size:2.5em&quot;>${this.calcAll(data)}</span>次</div>`}
+                            html={`<div style=&quot;color:#8c8c8c;font-size:1.16em;text-align: center;width: 10em;&quot;>总计：<span style=&quot;color:#262626;font-size:2.5em&quot;>${this.calcAll(data)}</span></div>`}
                             alignX="middle"
                             alignY="middle"
                         />

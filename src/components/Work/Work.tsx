@@ -21,6 +21,18 @@ export interface State {
 
 }
 
+
+const donutData = [
+    {
+        item: "工作室大会",
+        count: 40
+    },
+    {
+        item: "组会",
+        count: 21
+    }
+];
+
 class Message extends Component<any, any> {
     constructor(props: Props) {
         super(props);
@@ -103,7 +115,7 @@ class Message extends Component<any, any> {
                         </div>
                         <p className="no-more">没有更多了鸭 _(:з」∠)_</p>
                         <p className="work-title">参与程度</p>
-                        <Donut />
+                        <Donut data={donutData}/>
                     </TabPane>
                 </Tabs>
                 {auth === "2" ?

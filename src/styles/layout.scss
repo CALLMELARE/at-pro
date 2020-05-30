@@ -3,7 +3,7 @@ body {
 }
 
 .App {
-    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
 
     .logo {
         display: flex;
