@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Drawer } from 'antd';
 import '../../styles/noti.scss';
 import notiData from '../../test/notification';
+import { Link } from 'react-router-dom';
 
 export interface Props {
     visible: boolean,
@@ -24,9 +25,11 @@ class Message extends Component<Props, State> {
         data.map((item) => {
             list.push(
                 <div className="noti-card" key={item.id}>
-                    <span className="noti-title">{item.topic}
-                        <span className="noti-from">{item.from}</span>
-                    </span>
+                    <Link to={`/Message/Detail?id=${item.id}`}>
+                        <span className="noti-title">{item.topic}
+                            <span className="noti-from">{item.from}</span>
+                        </span>
+                    </Link>
                     <div className="noti-content">
                         <span className="noti-text">{item.message}</span>
                         <span className="noti-time">{item.updated_at}</span>

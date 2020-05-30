@@ -52,19 +52,23 @@ class MessageBox extends Component<Props, State> {
 
     renderMesItem = (status: string, data: item) => {
         return (
-            <Link to={`/Message/Detail?id=${data.id}`}>
-                <Row className="mesbox-item">
-                    <Col span={1}>{status === "read" ? null : <div className="pot"></div>}</Col>
-                    <Col span={this.state.onselect ? 16 : 17}><span className="mesbox-item-from">{data.from}:</span>{data.message.substring(0, 10)}</Col>
-                    <Col span={4}>{data.updated_at}</Col>
-                    <Col span={2}>{"工作室"}</Col>
-                    {this.state.onselect ?
+            <Row className="mesbox-item">
+                <Col span={1}>{status === "read" ? null : <div className="pot"></div>}</Col>
+                <Col span={this.state.onselect ? 16 : 17}>
+                    <Link to={`/Message/Detail?id=${data.id}`}>
+                        <span className="mesbox-item-from">{data.from}:</span>{data.message.substring(0, 10)}
+                    </Link>
+                </Col>
+                <Col span={4}>{data.updated_at}</Col>
+                <Col span={2}>{"工作室"}</Col>
+                {
+                    this.state.onselect ?
                         <Col span={1}>
                             <Checkbox value={data.id}></Checkbox>
                         </Col>
-                        : null}
-                </Row>
-            </Link>
+                        : null
+                }
+            </Row >
         )
     }
 
