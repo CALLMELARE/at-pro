@@ -180,7 +180,7 @@ class Dashboard extends Component<any, any> {
                                 <Card className="card-shadow">
                                     <p className="dashboard-bold">第{202015}期周报：<span className="dashboard-commit-status-not">未提交</span></p>
                                     <p className="dashboard-explain">起止时间：2020/04/07 ~ 2020/04/13</p>
-                                    <p className="dashboard-explain">周报截止日期为周一，在时间范围内可以进行编辑。超过编辑时间的周报不能进行编辑。<a href="/Work/EditReport" className="dashboard-to-report">去编辑周报 >></a></p>
+                                    <p className="dashboard-explain">周报截止日期为周一，在时间范围内可以进行编辑。超过编辑时间的周报不能进行编辑。<a href="/at-pro/Work/EditReport" className="dashboard-to-report">去编辑周报 >></a></p>
                                 </Card>
                             </Col>
                         </Row>
