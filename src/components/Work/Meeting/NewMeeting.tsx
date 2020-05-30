@@ -157,7 +157,8 @@ class NewMeeting extends Component<Props, State> {
                                 /> :
                                 <Input
                                     placeholder="8位字符串（区分大小写）"
-                                />}
+                                />
+                            }
                             <Button className="random-key" onClick={this.randomSerectKey.bind(this)}>随机生成</Button>
                             <Button className="random-key" onClick={this.resetSerectKey.bind(this)}>重置秘钥</Button>
                         </Form.Item>
