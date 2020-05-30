@@ -69,6 +69,12 @@
     }
 }
 
+.dashboard-badges {
+    .ant-badge {
+        margin: 0 0.5rem;
+    }
+}
+
 .dashboard-mission-card {
     background-color: #ffffff;
     padding: 1.5rem;
@@ -87,6 +93,7 @@
         .dashboard-mission-status{
             margin: 0 0.5rem;
         }
+
     }
 
     .dashboard-mission-right {

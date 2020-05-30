@@ -187,6 +187,12 @@ class Dashboard extends Component<any, any> {
                         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                             <Col span={24}>
                                 <div className="dashboard-title">近期任务</div>
+                                <p className="dashboard-badges">
+                                    {this.statusPoint(1, true)}
+                                    {this.statusPoint(2, true)}
+                                    {this.statusPoint(3, true)}
+                                    {this.statusPoint(4, true)}
+                                </p>
                                 {this.renderMissionList()}
                             </Col>
                         </Row>
