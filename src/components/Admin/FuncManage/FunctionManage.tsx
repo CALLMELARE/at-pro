@@ -1,11 +1,32 @@
 import React, { Component } from "react";
+import Panel from '../../public/AdminPanel';
+import Header from './FunctionHeader';
 
-class FunctionManage extends Component<any, any>{
+
+export interface Props {
+
+}
+
+export interface State {
+
+}
+
+class FunctionManage extends React.Component<Props, State> {
+    constructor(props: Props) {
+        super(props);
+        this.state = {
+
+        };
+    }
+
     render() {
         return (
-            <div>功能管理</div>
-        )
+            <div className="func-manage">
+                <Panel />
+                <Header />
+            </div>
+        );
     }
 }
 
-export default FunctionManage
+export default FunctionManage;

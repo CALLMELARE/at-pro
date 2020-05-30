@@ -81,14 +81,35 @@
         .post {
             text-align: center;
         }
-        .ant-btn{
+
+        .ant-btn {
             margin: 1rem;
         }
     }
 }
 
-.auth-manage{
-    .ant-form-item{
+.auth-manage {
+    .ant-form-item {
         margin: 0;
+    }
+}
+
+.func-header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .card {
+        padding: 1rem;
+        .btn {
+            text-decoration: none;
+            color: #000000;
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
     }
 }

@@ -21,7 +21,9 @@ import GroupAttending from '../components/Work/Meeting/GroupAttending';
 import NewMeeting from '../components/Work/Meeting/NewMeeting';
 import MessageDetail from '../components/Message/MessageDetail';
 import SystemNoticeHistory from '../components/Admin/SysNotice/SystemNoticeHistory';
-
+import FuncMeeting from '../components/Admin/FuncManage/Meeting';
+import FuncDiscuss from '../components/Admin/FuncManage/Discuss';
+import FuncAccount from '../components/Admin/FuncManage/Account';
 
 export default [{
     label: "首页",
@@ -35,7 +37,7 @@ export default [{
     label: "消息",
     path: '/Message',
     component: Message
-},{
+}, {
     label: "消息详情",
     path: '/Message/Detail',
     component: MessageDetail
@@ -67,7 +69,19 @@ export default [{
     label: "后台功能管理",
     path: '/Admin/FunctionManage',
     component: AdminFunctionManage,
-},{
+}, {
+    label: "后台功能管理(会议管理)",
+    path: '/Admin/FunctionManage/Meeting',
+    component: FuncMeeting,
+}, {
+    label: "后台功能管理(讨论区管理)",
+    path: '/Admin/FunctionManage/Discuss',
+    component: FuncDiscuss,
+}, {
+    label: "后台功能管理(账户管理)",
+    path: '/Admin/FunctionManage/Account',
+    component: FuncAccount,
+}, {
     label: "后台权限管理",
     path: '/Admin/AuthorityManage',
     component: AdminAuthorityManage,
@@ -75,7 +89,7 @@ export default [{
     label: "后台系统公告",
     path: '/Admin/SystemNotice',
     component: AdminSystemNotice,
-},  {
+}, {
     label: "后台系统历史公告",
     path: '/Admin/SystemNoticeHistory',
     component: SystemNoticeHistory,
@@ -111,7 +125,7 @@ export default [{
     label: "讨论区",
     path: "/Work/Discuss",
     component: Discuss
-},{
+}, {
     label: "讨论面板",
     path: "/Work/WorkSpace",
     component: WorkSpace

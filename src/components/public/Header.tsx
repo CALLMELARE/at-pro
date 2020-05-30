@@ -53,7 +53,7 @@ class HeaderComponent extends Component<Props, State>{
                     {panelCtrl === "true" ?
                         React.createElement(HomeOutlined, {
                             className: 'panel-admin-home',
-                            onClick: () => { window.location.href = "/" },
+                            onClick: () => { window.location.href = "/at-pro" },
                         }) : React.createElement(this.props.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                             className: 'trigger',
                             onClick: this.props.toggle,
