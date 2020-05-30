@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { Divider, Row, Col, Button } from 'antd';
+import { Divider, Row, Col, Button, Tag } from 'antd';
 import icon from '../../../assets/usericon.png';
 import { Link } from 'react-router-dom';
+import report from '../../../test/weekreport';
+
+const data = report.data;
 
 export interface Props {
 
@@ -18,6 +21,34 @@ class WeekReport extends React.Component<Props, State> {
 
         };
     }
+
+    renderMention = (mention: string) => {
+        let names = mention.split("@");
+        console.log(names)
+        let nameList: JSX.Element[] = [];
+        names.map((item) => {
+            if(item){
+                nameList.push(
+                    <Tag color="blue">@ {item}</Tag>
+                )
+            }
+        })
+        return nameList
+    }
+
+    renderTags = (tags: string) => {
+        let tag = tags.split("#");
+        let tagList: JSX.Element[] = [];
+        tag.map((item) => {
+            if(item){
+                tagList.push(
+                    <Tag color="volcano"># {item}</Tag>
+                )
+            }
+        })
+        return tagList
+    }
+
     render() {
         return (
             <div>
@@ -43,7 +74,13 @@ class WeekReport extends React.Component<Props, State> {
                         </Col>
                     </Row>
                     <Divider dashed className="divider-dashed" />
-                    <div className="report-content"></div>
+                    <div className="report-content">
+                        <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
+                        <div className="mention">
+                            {this.renderMention(data.mention)}
+                            {this.renderTags(data.tags)}
+                        </div>
+                    </div>
                 </div>
             </div>
         );

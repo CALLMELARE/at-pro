@@ -21,7 +21,7 @@ interface State {
 
 }
 
-var arr = ["### 做了什么", "### 遇到的问题", "### 下周的计划", "### 需要的支持"];
+var arr = ["## 做了什么", "## 遇到的问题", "## 下周的计划", "## 需要的支持"];
 const defaltVal = arr.join("\n");
 
 const layout = {
@@ -38,6 +38,10 @@ class WeekReportEdit extends Component<Props, State> {
     handleEditorChange({ html, text }: editorType) {
         console.log(html, text);
     }
+
+    onFinish = (values: any) => {
+        console.log('Success:', values);
+    };
 
     renderMemberList = () => {
         let list: JSX.Element[] = [];
@@ -72,7 +76,7 @@ class WeekReportEdit extends Component<Props, State> {
                     <MdEditor valueChange={this.handleEditorChange} defaltValue={defaltVal} />
                 </div>
 
-                <Form {...layout} className="mention-form">
+                <Form {...layout} className="mention-form" onFinish={this.onFinish}>
                     <Form.Item
                         label="@"
                         name="member"
@@ -98,12 +102,15 @@ class WeekReportEdit extends Component<Props, State> {
                             {this.renderTagList()}
                         </Mentions>
                     </Form.Item>
+                    <div className="editreport-btn-group">
+                        <Form.Item>
+                            <Button htmlType="submit" className="editreport-btn"><SaveOutlined />保存</Button>
+                        </Form.Item>
+                        <Form.Item>
+                            <Button htmlType="submit" className="editreport-btn"><RocketOutlined />提交</Button>
+                        </Form.Item>
+                    </div>
                 </Form>
-
-                <div className="editreport-btn-group">
-                    <Button className="editreport-btn"><SaveOutlined />保存</Button>
-                    <Button className="editreport-btn"><RocketOutlined />提交</Button>
-                </div>
             </div>
         )
     }
