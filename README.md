@@ -16,6 +16,12 @@ $ npm install
 $ npm run start
 ```
 
+## 自动部署/Auto Deploy
+
+```bash
+$ gh-pages -d build
+```
+
 ## 配置/Config
 
 在`src`下新建名为`site-config.json`的文件，配置基本信息
