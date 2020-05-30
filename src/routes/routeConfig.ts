@@ -24,7 +24,9 @@ import SystemNoticeHistory from '../components/Admin/SysNotice/SystemNoticeHisto
 import FuncMeeting from '../components/Admin/FuncManage/Meeting';
 import FuncMeetingDetail from '../components/Admin/FuncManage/MeetingDetail';
 import FuncDiscuss from '../components/Admin/FuncManage/Discuss';
+import FuncDiscussDetail from '../components/Admin/FuncManage/DiscussDetail';
 import FuncAccount from '../components/Admin/FuncManage/Account';
+import FuncAccountDetail from '../components/Admin/FuncManage/AccountDetail';
 
 export default [{
     label: "首页",
@@ -83,9 +85,17 @@ export default [{
     path: '/Admin/FunctionManage/Discuss',
     component: FuncDiscuss,
 }, {
+    label: "后台功能管理详情(讨论区管理)",
+    path: '/Admin/FunctionManage/DiscussDetail',
+    component: FuncDiscussDetail,
+}, {
     label: "后台功能管理(账户管理)",
     path: '/Admin/FunctionManage/Account',
     component: FuncAccount,
+}, {
+    label: "后台功能管理详情(账户管理)",
+    path: '/Admin/FunctionManage/AccountDetail',
+    component: FuncAccountDetail,
 }, {
     label: "后台权限管理",
     path: '/Admin/AuthorityManage',

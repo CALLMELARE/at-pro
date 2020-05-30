@@ -51,6 +51,7 @@ class Members extends React.PureComponent {
                 }
             }
         }
+        
         return (
             <div className="mem-content-by-group">
                 <p className="mem-title">组长</p>

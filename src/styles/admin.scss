@@ -141,3 +141,21 @@
         }
     }
 }
+
+.account-card {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 30px;
+    min-height: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    cursor: default;
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+}
