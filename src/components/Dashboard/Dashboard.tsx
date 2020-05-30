@@ -13,12 +13,13 @@ import '../../styles/dashboard.scss';
 import { org } from '../../settings/settings'
 import Heatmap from './Heatmap';
 // import { userName } from '../../actions'
+import mission from '../../test/discuss';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const message = false;
 const { Countdown } = Statistic;
-const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30;
+
 
 interface Props {
     collapsed: boolean,
@@ -54,9 +55,17 @@ class Dashboard extends Component<any, any> {
         return greeting
     }
 
-    calcDeadline = (ddl: Date) => {
-
-        return Date.now()
+    statusPoint = (status: number, withText: boolean) => {
+        switch (status) {
+            case 1:
+                return <Badge status="success" text={withText ? "进行中" : null} />
+            case 2:
+                return <Badge status="warning" text={withText ? "状态不明" : null} />
+            case 3:
+                return <Badge status="error" text={withText ? "已完结" : null} />
+            case 4:
+                return <Badge status="default" text={withText ? "未开始" : null} />
+        }
     }
 
     handleDDLClick = (e: any) => {
@@ -66,26 +75,43 @@ class Dashboard extends Component<any, any> {
         })
     }
 
+    calcProgress = (startTime: string, endTime: string) => {
+        let start = new Date(startTime);
+        let end = new Date(endTime);
+        let now = new Date();
+        if (now.getTime() - end.getTime() < 0) {
+            return Math.ceil((now.getTime() - start.getTime()) / (end.getTime() - start.getTime()) * 100)
+        } else {
+            return 100
+        }
+    }
+
     renderMissionList = () => {
         let list: JSX.Element[] = [];
-        list.push(
-            <div className="dashboard-mission-card card-shadow" key={0}>
-                <p className="dashboard-mission-title">天外天At系统升级及整合</p>
-                <div className="dashboard-mission-right">
-                    <div className="dashboard-mission-btns">
-                        <Button><UserOutlined /></Button>
-                        <Button><CalendarOutlined /></Button>
-                    </div>
-                    <div className="dashboard-mission-progress" onClick={this.handleDDLClick.bind(this)}>
-                        <p>时间进程</p>
-                        {this.state.DDLMouseOver ?
-                            <Countdown value={deadline} format="D 天 H 时 m 分 s 秒" />
-                            :
-                            <Progress status="active" percent={50} showInfo={false} />}
-                    </div>
+        let data = mission.data;
+        data.map((item) => {
+            let deadline = new Date(item.endTime);
+            list.push(
+                <div className="dashboard-mission-card card-shadow" key={0}>
+                    <p className="dashboard-mission-title">
+                        <span>{item.title}</span>
+                        <span className="dashboard-mission-status">{this.statusPoint(item.status, true)}</span>
+                    </p>
+                    <div className="dashboard-mission-right">
+                        <div className="dashboard-mission-btns">
+                            <Link to={`/Work/WorkSpace?id=${0}`}><CalendarOutlined /></Link>
+                        </div>
+                        <div className="dashboard-mission-progress" onClick={this.handleDDLClick.bind(this)}>
+                            <p>时间进程</p>
+                            {this.state.DDLMouseOver ?
+                                <Countdown value={deadline.getTime()} format="D 天 H 时 m 分 s 秒" />
+                                :
+                                <Progress status="active" percent={this.calcProgress(item.startTime, item.endTime)} showInfo={false} />}
+                        </div>
+                    </div >
                 </div >
-            </div >
-        )
+            )
+        })
         return list
     }
 
@@ -100,7 +126,7 @@ class Dashboard extends Component<any, any> {
                 {panelCtrl === "true" ?
                     <div className="admin-home">
                         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                        <Col span={6}>
+                            <Col span={6}>
                                 <Link to="/Admin/FunctionManage">
                                     <div className="admin-home-card card-shadow">
                                         <AppstoreAddOutlined style={{ fontSize: "5rem" }} />
