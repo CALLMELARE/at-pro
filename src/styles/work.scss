@@ -481,6 +481,8 @@
 
         .report-icon {
             width: 60%;
+            display: flex;
+            justify-content: center;
 
             img {
                 width: inherit;
@@ -508,7 +510,7 @@
 
             .ant-row {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-end;
             }
 
             .report-btn-edit {

@@ -58,11 +58,11 @@ class WeekReport extends React.Component<Props, State> {
                         <Col span={4} className="report-icon">
                             <img src={icon} alt="Icon" />
                         </Col>
-                        <Col span={10} className="report-basic">
+                        <Col span={14} className="report-basic">
                             <span className="report-basic-title">第20200202期周报</span>
                             <span className="report-basic-last">最近编辑于{4}天前</span>
                         </Col>
-                        <Col span={10} className="report-btns">
+                        <Col span={6} className="report-btns">
                             <Row >
                                 <Link to={`/Work/EditReport?id=${0}`}>
                                     <Button className="report-btn-edit">去编辑</Button>
