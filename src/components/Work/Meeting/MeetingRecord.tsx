@@ -17,7 +17,7 @@ const layout = {
 };
 
 const tailLayout = {
-    wrapperCol: { offset: 16 },
+    wrapperCol: { offset: 18 },
 };
 
 class MeetingRecord extends Component<Props, State> {

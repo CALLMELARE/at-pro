@@ -248,7 +248,7 @@
         }
     }
 
-    .work-title-attend{
+    .work-title-attend {
         font-size: 1.5rem;
         font-weight: bold;
         margin: 0.5rem 2rem;
@@ -385,6 +385,8 @@
     flex-direction: column;
     justify-content: center;
     padding: 1.5rem;
+
+    .hismetting-submit {}
 
     .hismetting-search {
         width: 100%;
@@ -692,11 +694,13 @@
 
     .workspace-his-card {
         padding: 1rem;
-        .workspace-his-team{
+
+        .workspace-his-team {
             font-size: 1.2rem;
             font-weight: bold;
             margin: 0.5rem 0;
         }
+
         .workspace-file-item {
             margin-bottom: 0.5rem;
             display: flex;
@@ -709,11 +713,13 @@
                 color: inherit;
             }
         }
+
         .workspace-todo {
 
             padding: 0 1rem;
             font-weight: bold;
-            div{
+
+            div {
                 font-weight: normal;
                 margin-bottom: 1rem;
             }
