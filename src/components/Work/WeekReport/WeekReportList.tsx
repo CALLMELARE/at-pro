@@ -63,11 +63,15 @@ class WeekReportList extends Component<Props, State> {
     }
 
     weekMenu = () => {
-        let i = 1;
         let list: JSX.Element[] = [];
+        for (let i = 0; i < 5; i++) {
+            list.push(
+                <Menu.Item key={`${202022 + i}`} >第{202022 + i}期周报</Menu.Item>
+            )
+        }
         return (
             <Menu onClick={handleMenuClick}>
-                <Menu.Item key={`${i}`} >{i}</Menu.Item>
+                {list}
             </Menu>
         )
     }
@@ -86,7 +90,7 @@ class WeekReportList extends Component<Props, State> {
                         </Dropdown>
                         <DatePicker onChange={onChange} picker="week" />
                     </div>
-                    <Collapse>
+                    <Collapse defaultActiveKey={['1', '2', '3', '4', '5', '6']}>
                         <Panel header="前端组" key="1">
                             {this.teamFilter(1)}
                         </Panel>
@@ -99,8 +103,11 @@ class WeekReportList extends Component<Props, State> {
                         <Panel header="设计组" key="4">
                             {this.teamFilter(4)}
                         </Panel>
-                        <Panel header="移动组" key="5">
+                        <Panel header="Android组" key="5">
                             {this.teamFilter(5)}
+                        </Panel>
+                        <Panel header="Ios组" key="6">
+                            {this.teamFilter(6)}
                         </Panel>
                     </Collapse>
                     <Link to="/Work/Report" className="reportlist-back">
