@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Badge, Tabs, Row, Col } from 'antd';
 import HeatMap from '../../Dashboard/Heatmap';
 import WorkSpacePublic from './WorkSpacePublic';
+import WorkSpaceManage from './WorkSpaceManage';
 import discussdetail from '../../../test/discussdetail';
 const { TabPane } = Tabs;
 const detail = discussdetail.data;
@@ -76,14 +77,17 @@ class WorkSpace extends React.Component<Props, State> {
                 </p>
                 <Tabs defaultActiveKey="1" className="workspace-container">
                     <TabPane tab="公共区" key="1" className="workspace-public">
-                        <WorkSpacePublic type={this.isHost()} team={this.teamMention()}/>
+                        <WorkSpacePublic type={this.isHost()} team={this.teamMention()} />
                     </TabPane>
                     <TabPane tab="历史提交" key="2" className="workspace-hiscommit">
 
                     </TabPane>
-                    <TabPane tab="组建管理" key="3" className="workspace-manage">
-
-                    </TabPane>
+                    {this.isHost() ?
+                        <TabPane tab="组建管理" key="3" className="workspace-manage">
+                            <WorkSpaceManage />
+                        </TabPane>
+                        : null
+                    }
                 </Tabs>
             </div>
         );

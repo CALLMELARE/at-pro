@@ -663,7 +663,18 @@
     .workspace-panel {
         width: 100%;
     }
-    .workspace-submit{
+
+    .workspace-submit {
+        margin: 0 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.workspace-manage {
+    padding: 1rem;
+
+    .workspace-submit {
         margin: 0 1rem;
         display: flex;
         justify-content: flex-end;

@@ -81,7 +81,7 @@ class SendMessage extends Component<Props, State> {
         let data = member.data;
         data.map((item) => {
             receiveList.push(
-                <Option value={item.memId}>{item.name}</Option>
+                <Option value={item.name}>{item.name}</Option>
             )
         })
         return receiveList
