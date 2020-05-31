@@ -92,6 +92,13 @@
     .ant-form-item {
         margin: 0;
     }
+
+    .auth-text {
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
 }
 
 .func-manage {
@@ -250,11 +257,11 @@
     color: #EC6941;
 }
 
-.recover-btn{
+.recover-btn {
     color: #d9d9d9;
 }
 
-.recover-btn:hover{
+.recover-btn:hover {
     color: #89C997;
 }
 

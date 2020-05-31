@@ -27,7 +27,7 @@ class Members extends React.PureComponent {
                 let _item: Member = data[i]
                 if (_item.type === "组长") {
                     memLeader.push(
-                        <div className="mem-card card-shadow" key={_item.memId}>
+                        <div className="mem-card" key={_item.memId}>
                             <span>{_item.name}</span>
                             <div>
                                 <SendMessage btncls="mem-mail-icon" content={<MailOutlined />} target={[_item.memId]} />
@@ -43,7 +43,7 @@ class Members extends React.PureComponent {
                     )
                 } else if (_item.type === "组员") {
                     memMember.push(
-                        <div className="mem-card card-shadow" key={_item.memId}>
+                        <div className="mem-card" key={_item.memId}>
                             <span>{_item.name}</span>
                             <div>
                                 <SendMessage btncls="mem-mail-icon" content={<MailOutlined />} />

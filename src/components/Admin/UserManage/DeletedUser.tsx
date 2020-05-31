@@ -47,7 +47,7 @@ class DeletedUser extends Component<Props, State> {
             for (let i = 0; i < data.length; i++) {
                 let _item: Member = data[i]
                 memMember.push(
-                    <Row className="account-card card-shadow" key={_item.memId}>
+                    <Row className="account-card" key={_item.memId}>
                         <Col span={4}>{_item.name}</Col>
                         <Col span={16}>{this.campusSwitch(_item.campus) + "校区"}</Col>
                         <Col span={4}>

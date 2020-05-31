@@ -48,9 +48,13 @@ class AuthorityManage extends Component<Props, State>{
             for (let i = 0; i < data.length; i++) {
                 let _item: Member = data[i]
                 memLeader.push(
-                    <Row className="mem-card card-shadow" key={_item.memId}>
-                        <Col span={4}>{_item.name}</Col>
-                        <Col span={16}>{this.campusSwitch(_item.campus) + "校区"}</Col>
+                    <Row className="mem-card" key={_item.memId}>
+                        <Col className="auth-text" span={4}>
+                            <span >{_item.name}</span>
+                        </Col>
+                        <Col className="auth-text" span={16} >
+                            <span>{this.campusSwitch(_item.campus) + "校区"}</span>
+                        </Col>
                         <Col span={4}>
                             <Form.Item name={`switch${_item.memId}`}>
                                 <Switch

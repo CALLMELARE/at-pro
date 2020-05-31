@@ -49,7 +49,7 @@ class Account extends React.Component<Props, State> {
                 let _item: Member = data[i]
                 if (_item.type === "组长") {
                     memLeader.push(
-                        <Row className="account-card card-shadow" key={_item.memId}>
+                        <Row className="account-card" key={_item.memId}>
                             <Col span={4}>{_item.name}</Col>
                             <Col span={16}>{this.campusSwitch(_item.campus) + "校区"}</Col>
                             <Col span={4}>
@@ -61,7 +61,7 @@ class Account extends React.Component<Props, State> {
                     )
                 } else if (_item.type === "组员") {
                     memMember.push(
-                        <Row className="account-card card-shadow" key={_item.memId}>
+                        <Row className="account-card" key={_item.memId}>
                             <Col span={4}>{_item.name}</Col>
                             <Col span={16}>{this.campusSwitch(_item.campus) + "校区"}</Col>
                             <Col span={4}>
