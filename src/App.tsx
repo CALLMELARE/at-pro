@@ -59,7 +59,7 @@ class App extends Component<Props, State> {
   render() {
     const panelCtrl = sessionStorage.getItem("admin-panel");
     return (
-      <Layout className="App">
+      <Layout className={panelCtrl==="true"?"App AppHeight":"App"}>
         {panelCtrl === "true" ? null : <SiderCustom collapsed={this.state.collapsed} />}
         <Layout className="site-layout">
           <Header className="header-background" style={{ padding: 0 }}>

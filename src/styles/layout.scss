@@ -2,8 +2,13 @@ body {
     font-family: "Montserrat", "Avenir Next", "Avenir", "Segoe UI", "Hiragino Sans GB", "Hiragino Sans GB W3", "PingFang SC", "Microsoft Yahei", "SimHei", "SimKai", sans-serif;
 }
 
-.App {
+.AppHeight{
     min-height: -webkit-fill-available;
+    height: auto !important;
+}
+
+.App {
+    height: -webkit-fill-available;
 
     .logo {
         display: flex;
