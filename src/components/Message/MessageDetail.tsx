@@ -26,10 +26,10 @@ class MessageDetail extends React.Component<Props, State> {
                 <p className="mes-title">消息详情</p>
                 <div className="mes-detail-card card-shadow">
                     <Row className="mes-detail-header">
-                        <Col offset={4} span={8} className="mes-detail-item">
+                        <Col span={12} className="mes-detail-item">
                             From:<span>{data[0].from}</span>
                         </Col>
-                        <Col span={8} >
+                        <Col span={12} >
                             {data[0].updated_at}
                         </Col>
                     </Row>
