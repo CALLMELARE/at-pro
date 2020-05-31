@@ -45,15 +45,15 @@ class Login extends Component<any, any> {
             this.setState({ loading: false, })
             if (values.username === "admin" && values.password === "twtstudio") {
                 sessionStorage.setItem("admin-panel", "true");
-                window.location.href = "/at-pro";
+                window.location.href = "/at-pro/";
             } else if (values.username === "user" && values.password === "twtstudio") {
                 sessionStorage.setItem("admin-panel", "false");
                 sessionStorage.setItem("auth", "1")
-                window.location.href = "/at-pro";
+                window.location.href = "/at-pro/";
             } else if (values.username === "leader" && values.password === "twtstudio") {
                 sessionStorage.setItem("admin-panel", "false");
                 sessionStorage.setItem("auth", "2")
-                window.location.href = "/at-pro";
+                window.location.href = "/at-pro/";
             } else {
                 this.error()
             }
@@ -73,10 +73,10 @@ class Login extends Component<any, any> {
                     this.setState({ loading: false, })
                     if (type) {
                         sessionStorage.setItem("admin-panel", "true");
-                        window.location.href = "/at-pro";
+                        window.location.href = "/at-pro/";
                     } else {
                         sessionStorage.setItem("admin-panel", "false");
-                        window.location.href = "/at-pro";
+                        window.location.href = "/at-pro/";
                     }
                 } else {
                     this.error()
