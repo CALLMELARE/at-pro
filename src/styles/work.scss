@@ -620,3 +620,33 @@
     font-weight: bold;
     font-size: 1rem;
 }
+
+.workspace-public {
+    .workspace-todo {
+        padding: 1rem;
+        font-weight: bold;
+    }
+
+    .workspace-upload {
+        padding: 1rem;
+        font-weight: bold;
+
+        p {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .workspace-filelist {
+            .workspace-file-item {
+                display: flex;
+                padding: 0.5rem;
+                background-color: #ffffff;
+                border-radius: 5px;
+                a{
+                    font-size: 1rem;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}

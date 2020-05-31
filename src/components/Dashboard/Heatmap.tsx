@@ -1,6 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
 import { G2, Chart, Geom, Axis, Tooltip, Coord, Label, Legend, View, Guide, Shape, Facet, Util } from 'bizcharts';
-import fetchApi from '../../api/callApi';
 
 interface Props {
 }
@@ -47,7 +46,7 @@ class Heatmap extends Component<any, any>{
             <div id="calendar">
                 {this.state.commitData ?
                     <Chart
-                        height={window.innerHeight}
+                        height={300}
                         data={this.state.commitData}
                         scale={cols}
                         forceFit
@@ -68,17 +67,17 @@ class Heatmap extends Component<any, any>{
                                 },
                                 formatter: val => {
                                     if (val === "2") {
-                                        return "MAY";
+                                        return "五月";
                                     } else if (val === "6") {
-                                        return "JUN";
+                                        return "六月";
                                     } else if (val === "10") {
-                                        return "JUL";
+                                        return "七月";
                                     } else if (val === "15") {
-                                        return "AUG";
+                                        return "八月";
                                     } else if (val === "19") {
-                                        return "SEP";
+                                        return "九月";
                                     } else if (val === "24") {
-                                        return "OCT";
+                                        return "十月";
                                     }
 
                                     return "";

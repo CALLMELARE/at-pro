@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Badge, Tabs } from 'antd';
+import { Badge, Tabs, Row, Col } from 'antd';
+import HeatMap from '../../Dashboard/Heatmap';
+import WorkSpacePublic from './WorkSpacePublic';
 const { TabPane } = Tabs;
 
 
@@ -42,9 +44,12 @@ class WorkSpace extends React.Component<Props, State> {
                 </p>
                 <Tabs defaultActiveKey="1" className="workspace-container">
                     <TabPane tab="公共区" key="1" className="workspace-public">
+                        <WorkSpacePublic type="host"/>
+                    </TabPane>
+                    <TabPane tab="历史提交" key="2" className="workspace-hiscommit">
 
                     </TabPane>
-                    <TabPane tab="我的历史提交" key="2" className="workspace-hiscommit">
+                    <TabPane tab="组建管理" key="3" className="workspace-manage">
 
                     </TabPane>
                 </Tabs>
