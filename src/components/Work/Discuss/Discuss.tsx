@@ -57,7 +57,7 @@ class Discuss extends React.Component<Props, State> {
         data.map((item) => {
             list.push(
                 <Col span={12} key={0}>
-                    <Link to={`/Work/WorkSpace?id=${0}`}>
+                    <Link to={`/Work/WorkSpace?id=${item.id}`}>
                         <div className="discuss-item card-shadow">
                             <div>
                                 <span className="discuss-item-title">{this.statusPoint(item.status, false)}{item.title}</span>
