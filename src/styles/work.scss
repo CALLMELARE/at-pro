@@ -680,3 +680,37 @@
         justify-content: flex-end;
     }
 }
+
+.workspace-his {
+    padding: 1rem;
+
+    .workspace-his-card {
+        padding: 1rem;
+        .workspace-his-team{
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        .workspace-file-item {
+            margin-bottom: 0.5rem;
+            display: flex;
+            padding: 0.5rem;
+            background-color: #ffffff;
+            border-radius: 5px;
+
+            a {
+                font-size: 1rem;
+                color: inherit;
+            }
+        }
+        .workspace-todo {
+
+            padding: 0 1rem;
+            font-weight: bold;
+            div{
+                font-weight: normal;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
