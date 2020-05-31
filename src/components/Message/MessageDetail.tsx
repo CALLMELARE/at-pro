@@ -24,12 +24,16 @@ class MessageDetail extends React.Component<Props, State> {
         return (
             <div>
                 <p className="mes-title">消息详情</p>
-                <div className="mes-detail-card">
+                <div className="mes-detail-card card-shadow">
                     <Row className="mes-detail-header">
-                        <Col offset={4} span={8} className="mes-detail-item">From:<span>{data[0].from}</span></Col>
-                        <Col span={8} >{data[0].updated_at}</Col>
+                        <Col offset={4} span={8} className="mes-detail-item">
+                            From:<span>{data[0].from}</span>
+                        </Col>
+                        <Col span={8} >
+                            {data[0].updated_at}
+                        </Col>
                     </Row>
-                    <p className="mes-detail-item">内容:<span>{data[0].message}</span></p>
+                    <p className="mes-detail-content">内容:<span>{data[0].message}</span></p>
                 </div>
             </div>
         );

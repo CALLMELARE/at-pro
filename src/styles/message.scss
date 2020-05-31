@@ -223,6 +223,15 @@
             font-weight: normal;
         }
     }
+
+    .mes-detail-content {
+        padding: 2rem;
+        font-weight: bold;
+
+        span {
+            font-weight: normal;
+        }
+    }
 }
 
 @keyframes sendmessage {
