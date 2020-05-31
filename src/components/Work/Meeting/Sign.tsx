@@ -21,11 +21,11 @@ class Sign extends Component<any, any> {
                         <p className="sign-card-t1">休想蒙混过关，快快交出密码</p>
                         <Form>
                             <Input.Password className="sign-card-psw" placeholder="在此输入秘钥……" />
+                            <p className="sign-card-t2">按Enter键结束输入哦</p>
                             <div className="sign-card-btns">
                                 <Button className="sign-card-btn card-shadow">确定</Button>
                             </div>
                         </Form>
-                        <p className="sign-card-t2">按Enter键结束输入哦</p>
                     </Col>
                 </div>)
                 break;
