@@ -143,7 +143,7 @@ class Message extends Component<any, any> {
                             {this.renderFin()}
                         </div>
                         <p className="no-more">没有更多了鸭 _(:з」∠)_</p>
-                        <p className="work-title">参与程度</p>
+                        <p className="work-title-attend">参与程度</p>
                         <div style={{ display: "flex" }}>
                             <Donut data={donutData}
                                 style={{ width: "33.333%" }}
