@@ -8,8 +8,7 @@ body {
 }
 
 .App {
-    height: -webkit-fill-available;
-
+    min-height: 100vh;
     .logo {
         display: flex;
         justify-content: center;
